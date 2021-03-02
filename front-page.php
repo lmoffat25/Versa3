@@ -11,8 +11,6 @@
 
     get_template_part( 'template-parts/content', 'functionalities-cards' );
 
-    get_template_part( 'template-parts/content', 'functionalities-menu' );
-
     get_template_part('template-parts/options-newsletter');
 
     get_footer();

@@ -48,11 +48,6 @@ if ( ! function_exists( 'fitbit_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus(
-			array(
-				'menu-1' => esc_html__( 'Primary', 'fitbit' ),
-			)
-		);
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -211,3 +206,11 @@ if ( class_exists( 'WooCommerce' ) ) {
             'update_button' => 'Mettre à jour',
         ]);
     }
+
+	function lpwd_register_menus() {
+        register_nav_menus( array(
+            'main-menu' => 'Menu principal',
+            'footer-menu' => 'Menu Footer'
+        ) );
+    }
+    add_action( 'init', 'lpwd_register_menus' );
