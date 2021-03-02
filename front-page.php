@@ -2,6 +2,7 @@
 	$site_description = get_bloginfo( 'description', 'display' );
 
     get_header();
+    // booh
 
     get_template_part( 'template-parts/content', 'header' );
 
