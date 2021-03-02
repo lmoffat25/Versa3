@@ -1,0 +1,290 @@
+/*#######################################################
+
+Table des matières  :
+
+    #1 Menu
+        @1 Animations
+        @2 Main navigation
+        @3 Navbar Mobile
+        
+    #2 Links
+
+#########################################################*/
+
+/* -----------------------------------------------------
+    #1 Menu
+----------------------------------------------------------*/
+
+/* @1 Animations ----------------------------------------*/
+@keyframes fadeInLeft {
+    from {
+        opacity : 0;
+        transform : translateX(-100%);
+    }
+    to {
+        opacity : 1;
+        transform : translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity : 1;
+        transform : translateX(0);
+    }
+    to {
+        opacity : 0;
+        transform : translateX(100%);
+    }
+}
+
+
+/* @2 Main navigation ----------------------------------------*/
+$link-length : 2;
+.centerHz {
+    margin : 0 auto;
+}
+
+.header {
+    position : fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav {
+    background : $white;
+    top : 0;
+    height: rem(65);
+    width: -webkit-fill-available;
+}
+
+
+.mainNav {
+    $this : &;
+    z-index : 999;
+    @include large-down() {
+        position : fixed;
+        top : 0;
+        left : 0;
+        width : 100%;
+        height : 100%;
+        background : $white;
+        display : none;
+        animation-fill-mode : both;
+        animation-duration : .25s;
+    }
+
+    &.-open {
+        display : block;
+        animation-name : fadeInLeft;
+        #{$this} {
+            animation-name : fadeInLeft;
+            animation-delay : .25s;
+            @for $i from 1 through $link-length {
+                &:nth-of-type(#{$i}) {
+                    animation-delay : .25s * $i;
+                }
+            }
+        }
+    }
+    &.-close {
+        display : block;
+        animation-name : fadeOut;
+    }
+
+    &__container {
+        display : flex;
+        justify-content : center;
+        align-items : center;
+        height : 100%;
+        @include large-up() {
+            justify-content : space-between;
+            align-items : center;
+            width : 100%;
+        }
+    }
+
+    &__logo {
+        @include large-down() {
+            display : none;
+        }
+    }
+
+    &__list {
+        display: flex;
+        padding : 0;
+        list-style : none;
+    }
+
+    &__account {
+        text-align : center;
+        margin : rem(32) 0;
+        @include large-up() {
+            display : none;
+        }
+    }
+
+    &__link {
+        font-family : $font-title;
+        text-transform : uppercase;
+        padding : rem(2) rem(16);
+        text-decoration : none;
+
+        &:last-of-type {
+            border : none;
+        }
+
+        @include large-down() {
+            font-size : rem(25);
+            padding : rem(32);
+            padding-left : 0;
+            border-bottom : 1px solid $black;
+        }
+
+        @include large-up() {
+            display : inline-block;
+            border-right : 2px solid $black;
+        }
+
+        a {
+            color: $black;
+            padding-bottom : rem(5);
+            text-decoration : none;
+            transition : color .2s ease-in-out;
+
+            @include x-large-down() {
+                font-size : rem(14);
+            }
+        }
+        &.-active,
+        &:hover {
+            a {
+                border-bottom : rem(1) solid $primary-color;
+                color : $primary-color;
+            }
+        }
+    }
+
+    &__icon {
+        display : inline-block;
+        margin : 0 rem(16);
+
+        &:last-of-type() {
+            margin-right : 0;
+        }
+        @include large-down() {
+            display : none;
+        }
+        &.-profile, &.-cart {
+            a {
+                content: '';
+                display: block;
+                height: 30px;
+                text-indent: -9999999px;
+                width: 30px;
+            }
+        }
+        &.-profile {
+            a {
+                background: url('../../images/profil.svg') no-repeat;
+            }
+        }
+        &.-cart {
+            a {
+                 background: url('../../images/panier.svg') no-repeat;
+             }
+        }
+    }
+}
+
+/* @3 Navbar Mobile ----------------------------------------*/
+.navMobile {
+    z-index : 1000;
+    padding : 0 rem(24);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include large-up() {
+        display : none;
+    }
+
+    .burger {
+        display : flex;
+        align-items : center;
+
+        &__toggle {
+            height : rem(25);
+            width : rem(25);
+            margin-left: rem(16);
+            padding-left: rem(16);
+            border-left : 2px solid $black;
+    
+            &.-active {
+                span {
+                    &:nth-of-type(1) {
+                        transform : translateY(12px) rotate(-45deg);
+                    }
+                    &:nth-of-type(2) {
+                        width : rem(0);
+                    }
+                    &:nth-of-type(3) {
+                        width: rem(24);
+                        transform : translateY(-8px) rotate(45deg);
+                    }
+                }
+            }
+
+            span {
+                height: 2px;
+                width: rem(24);
+                display: block;
+                background: $black;
+                margin-bottom : rem(8);
+                border-radius : 2px;
+                transition: $transition;
+
+                &:nth-of-type(2) {
+                    width: rem(14);
+                }
+                &:nth-of-type(3) {
+                    width: rem(8);
+                }
+            }
+        }
+    }
+}
+
+
+/* -----------------------------------------------------
+    #2 Links
+----------------------------------------------------------*/
+.link {
+    color : $primary-color;
+    transition : $transition;
+    &:hover {
+        color : $primary-color-light;
+        text-decoration : none;
+    }
+    &:visited {
+        color : $primary-color-dark;
+    }
+}
+
+  /*Return */
+  .return {
+    color : $text-color;
+    text-decoration : none;
+    display : block;
+    width : fit-content;
+
+    border-left : rem(2) solid $black;
+    padding : rem(7);
+    transition : $transition;
+
+    &:hover {
+        padding-left : rem(4);
+    }
+}
+

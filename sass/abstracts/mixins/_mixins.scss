@@ -1,0 +1,58 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+@mixin medium-down() {
+    @media screen and (max-width : 640px) {
+        @content;
+    }
+}
+
+@mixin medium-up() {
+    @media screen and (min-width : 640px) {
+        @content;
+    }
+}
+
+@mixin medium-only() {
+    @media screen and (min-width : 640px) and (min-width : 960px) {
+        @content;
+    }
+}
+
+@mixin large-down() {
+    @media screen and (max-width : 960px) {
+        @content;
+    }
+}
+
+@mixin large-up() {
+    @media screen and (min-width : 960px) {
+        @content;
+    }
+}
+
+@mixin large-only() {
+    @media screen and (min-width : 960px) and (min-width : 1200px) {
+        @content;
+    }
+}
+
+@mixin x-large-down() {
+    @media screen and (max-width : 1200px) {
+        @content;
+    }
+}
+
+@mixin x-large-up() {
+    @media screen and (min-width : 1200px) {
+        @content;
+    }
+}

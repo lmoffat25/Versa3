@@ -1,0 +1,56 @@
+.row {
+    display: flex;
+}
+
+@for $i from 1 through $maxColumns {
+    .col-#{$i}{
+        flex-basis : calculate-width($i);
+        max-width: calculate-width($i);
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@include medium-down() { //640px -
+    @for $i from 1 through $maxColumns {
+        .col-s-#{$i}{
+            flex-basis : calculate-width($i);
+            max-width: calculate-width($i);
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+}
+
+@include medium-up() { //640px +
+    @for $i from 1 through $maxColumns {
+        .col-md-#{$i}{
+            flex-basis : calculate-width($i);
+            max-width: calculate-width($i);
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+}
+
+@include large-up() { //960px +
+    @for $i from 1 through $maxColumns {
+        .col-lg-#{$i}{
+            flex-basis : calculate-width($i);
+            max-width: calculate-width($i);
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+}
+
+@include x-large-up() { //1200px +
+    @for $i from 1 through $maxColumns {
+        .col-xl-#{$i}{
+            flex-basis : calculate-width($i);
+            max-width: calculate-width($i);
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+}

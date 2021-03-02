@@ -1,0 +1,221 @@
+/*#######################################################
+
+Table des matières  :
+
+    #1 Forms
+    #2 Switch
+    #3 Checkbox
+    #34Dropdown Menu
+
+#########################################################*/
+
+/* -----------------------------------------------------
+    #1 Form
+----------------------------------------------------------*/
+$states : ("incorrect", $red), ("correct", $green), ("filled", $primary-color);
+
+.input {
+    border : none;
+    border-bottom : rem(1) solid #C9C8CD;
+    padding-bottom : rem(10);
+    &:focus {
+        outline : none;
+    }
+
+    @each $state in $states {
+        &.-#{nth($state, 1)} {
+            border-bottom : rem(1) solid #{nth($state, 2)};
+            color : #{nth($state, 2)};
+
+            &:placeholder {
+                color : #{nth($state, 2)};
+            }
+        }
+    }
+}
+
+
+/* -----------------------------------------------------
+    #2 Switch 
+----------------------------------------------------------*/
+.switch {
+    display : inline-block;
+    height : rem(32);
+    position : relative;
+    width : rem(69);
+    
+    &__box {
+        height : 0;
+        opacity : 0;
+        width : 0;
+
+        //States
+        &:checked + .switch__slider {
+            background-color : $secondary-color-lighter;
+        }
+        &:focus + .switch__slider {
+            box-shadow : 0 0 1px $white;
+        }
+        &:checked + .switch__slider:before {
+            -webkit-transform : translateX(rem(36));
+            -ms-transform : translateX(rem(36));
+            transform : translateX(rem(36));
+            background-color : $primary-color;
+        }
+    }
+    &__slider {
+        cursor : pointer;
+        position : absolute;
+        background-color : #ccc;
+        border-radius : rem(34);
+        bottom : 0;
+        top : 0;
+        left : 0;
+        right : 0;
+        -webkit-transition : $transition;
+        transition : $transition;
+
+        &:before {
+            background-color : $black-light;
+            content : "";
+            height : rem(32);
+            position : absolute;
+            width : rem(32);
+            -webkit-transition : $transition;
+            transition : $transition;
+            border-radius : 50%;
+        }
+    }
+}
+
+/* -----------------------------------------------------
+    #3 Checkbox
+----------------------------------------------------------*/
+.checkbox {
+    display : block;
+    position : relative;
+    padding-left : rem(35);
+    margin-bottom : rem(12);
+    cursor : pointer;
+    font-size : rem(22);
+    -webkit-user-select : none;
+    -moz-user-select : none;
+    -ms-user-select : none;
+    user-select : none;
+
+    //States
+    &:hover input ~ .checkbox__mark {
+        border : rem(2) solid $primary-color;
+    }
+
+
+    &__box {
+        position : absolute;
+        opacity : 0;
+        cursor : pointer;
+        height : 0;
+        width : 0;
+        
+        //sates
+        &:checked ~ .checkbox__mark {
+            border : rem(2) solid $primary-color;
+            &:after {
+                display : block;
+            }
+        }
+    }
+
+    
+    &__mark {
+        position : absolute;
+        top : 0;
+        left : 0;
+        height : rem(25);
+        width : rem(25);
+        background-color : $white;
+        border : rem(2) solid $secondary-color-light;
+        border-radius : rem(6);
+
+        &:after {
+            border : solid $primary-color;
+            border-width : 0 rem(3) rem(3) 0;
+            content : "";
+            position : absolute;
+            display : none;
+
+            left : rem(7);
+            top : rem(3);
+            width : rem(5);
+            height : rem(10);
+
+            -webkit-transform : rotate(45deg);
+            -ms-transform : rotate(45deg);
+            transform : rotate(45deg);
+        }
+    }  
+}
+
+/* -----------------------------------------------------
+    #4 Dropdown Menu
+----------------------------------------------------------*/
+.dropdown {
+    border : none;
+    border-bottom : rem(1) solid $black-light;
+    padding : 0 rem(5) rem(5) 0;
+}
+
+.dropdownCustom {
+    $this : &;
+    background-color : $secondary-color-lighter;
+    border-radius : rem(5);
+    cursor: pointer;
+    width : rem(310);
+    .fa {
+        &:before {
+            color : $primary-color;
+        }
+    }
+    .dropdownCustom__title {
+        align-items : center;
+        display : flex;
+        justify-content : space-between;
+        margin : rem(5) 0;
+        padding : 0 rem(20);
+        h2, h3 {
+            font-weight : 600;
+            margin: rem(20) 0;
+        }
+    }
+    .dropdownCustom__content {
+        display : none;
+        margin : 0 auto;
+        padding-bottom : rem(20);
+        div {
+            align-items : center;
+            display : flex;
+            p {
+                margin : 0;
+                padding : rem(5) 0 rem(5) rem(20);
+            }
+        }
+    }
+    &__chevron {
+        transition: $transition;
+    }
+
+    &.-open {
+        #{$this}__content {
+            display: block;
+        }
+        #{$this}__chevron{
+            transform : rotate(-180deg);
+        }
+    }
+    &.-functionalities {
+        .-icon {
+            &:before {
+                font-size : rem(35);
+            }
+        }
+    }
+}

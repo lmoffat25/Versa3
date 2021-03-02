@@ -1,0 +1,27 @@
+label, input, button, h1, h2, h3, h4 {
+    color: #212121;
+    font-family: "Maven Pro", sans-serif;
+    font-size: 1rem;
+
+    a, a:visited, a:hover, a:visited:hover {
+        color : inherit;
+    }
+}
+
+body {
+    //margin-top: rem(65);
+}
+
+body, select, p, a {
+    color: #212121;
+    font-family: "Open Sans", sans-serif;
+}
+
+a {
+    color : $primary-color;
+
+    &:hover {
+        color : $primary-color-light;
+        text-decoration : none;
+    }
+}

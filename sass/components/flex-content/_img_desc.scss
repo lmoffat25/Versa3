@@ -1,0 +1,7 @@
+.desc-img {
+    margin: 20px auto !important;
+
+    @include medium-up() {
+        display : flex;
+    }
+}

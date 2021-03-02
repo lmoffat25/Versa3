@@ -1,0 +1,7 @@
+@function calculate-width($number) {
+    @return $number/$maxColumns * 100%;
+}
+
+@function rem($px) {
+    @return $px/$baseFont + rem;
+}

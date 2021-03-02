@@ -1,0 +1,58 @@
+.newsletter {
+    display : flex;
+    flex-flow : column;
+    align-items : center;
+    margin: rem(64) auto;
+
+    &__img, &__content {
+        text-align: center;
+    }
+
+    &__img {
+        margin-bottom: rem(50);
+        h2 {
+            font-size: rem(50);
+            font-weight: bold;
+            margin-top: rem(-25);
+        }
+    }
+
+    &__content {
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+
+    &__title {
+        &.-small {
+            font-size : rem(16);
+        }
+    }
+
+    &__text {
+        &.-big {
+            font-family : $font-title;
+            font-size : rem(24);
+            font-weight : bold;
+        }
+    }
+
+    &__form {
+        margin-top : rem(16);
+    }
+
+    &__fields {
+        @include medium-down() {
+            display : flex;
+            flex-flow : column;
+            align-items : center;
+
+            width : 100%;
+
+            input {
+                margin-bottom : rem(16);
+            }
+        }
+        
+    }
+}

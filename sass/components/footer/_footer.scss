@@ -1,0 +1,39 @@
+.footer {
+    border-top : rem(2) solid $black;
+    padding-top : rem(16);
+    margin-top: rem(20) !important;
+    margin-bottom: rem(20) !important;
+    display : flex;
+    flex-flow : wrap;
+    justify-content : space-between;
+    &__copyright {
+        color : $secondary-color;
+    }
+
+    &__content {
+        display : flex;
+        flex-flow : wrap;
+        align-items: center;
+        list-style: none;
+    }
+
+    &__item {
+        border-right  : rem(2) solid $black;
+        padding : rem(2) rem(16) 0 0;
+        margin-right: rem(16);
+        height : fit-content;
+        a {
+            color : $black;
+            text-decoration : none;
+        }
+
+        &:visited {
+            color : inherit;
+        }
+
+        &:last-of-type {
+            border : none;
+            padding-right : none;
+        }
+    }
+}

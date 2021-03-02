@@ -1,0 +1,35 @@
+.top-banner {
+    display : flex;
+    flex-flow : column;
+    justify-content : center;
+    align-items : center;
+    position : relative;
+    height : 100vh;
+
+    h1 {
+        position : absolute;
+        top : 11%;
+        height : fill-available;
+        color: $white;
+        @include medium-up() {
+            top : 0;
+        }
+
+        span {
+            position : absolute;
+            bottom : 30%;
+            width: max-content;
+            left: 50%;
+            transform: translate3d(-50%, 0px, 0px);
+            @include medium-up() {
+                bottom : 0;
+            }
+        }
+    }
+
+    .button {
+        position : absolute;
+        bottom : rem(16);
+    }
+}
+
