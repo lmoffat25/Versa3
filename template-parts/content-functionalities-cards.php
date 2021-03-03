@@ -8,9 +8,9 @@
 ?>
 <!-- Fonctionnalités -->
 
-<section class="fonctionnalites col-md-12">
+<section class="fonctionnalites col-12">
     <h2><?php if($section_title != null) : echo $section_title; endif;?></h2>
-    <div class="fonctionnalites__container col-10   centerHz">
+    <div class="fonctionnalites__container col-md-10   centerHz">
     <?php 
         $funcs = new WP_Query( $args ); 
         while ( $funcs->have_posts() ) : $funcs->the_post(); 
