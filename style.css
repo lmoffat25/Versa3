@@ -526,33 +526,33 @@ hr {
   margin-bottom: 1.5em;
 }
 
-ul,
+/*ul,
 ol {
-  margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 3em;
 }
 
 ul {
-  list-style: disc;
+	list-style: disc;
 }
 
 ol {
-  list-style: decimal;
+	list-style: decimal;
 }
 
 li > ul,
 li > ol {
-  margin-bottom: 0;
-  margin-left: 1.5em;
+	margin-bottom: 0;
+	margin-left: 1.5em;
 }
 
 dt {
-  font-weight: 700;
+	font-weight: 700;
 }
 
 dd {
-  margin: 0 1.5em 1.5em;
+	margin: 0 1.5em 1.5em;
 }
-
+*/
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
@@ -1620,6 +1620,7 @@ Table des matières  :
 
 .mainNav {
   z-index: 999;
+  position: fixed;
 }
 
 @media screen and (max-width: 960px) {
@@ -1787,11 +1788,11 @@ Table des matières  :
 }
 
 .mainNav__icon.-profile a {
-  background: url("../../images/profil.svg") no-repeat;
+  background: url("./images/profil.svg") no-repeat;
 }
 
 .mainNav__icon.-cart a {
-  background: url("../../images/panier.svg") no-repeat;
+  background: url("./images/panier.svg") no-repeat;
 }
 
 /* @3 Navbar Mobile ----------------------------------------*/
