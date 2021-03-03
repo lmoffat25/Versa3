@@ -63,6 +63,7 @@ $link-length : 2;
 .mainNav {
     $this : &;
     z-index : 999;
+    position : fixed;
     @include large-down() {
         position : fixed;
         top : 0;
