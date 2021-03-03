@@ -6,6 +6,10 @@
     position : relative;
     height : 100vh;
 
+    &__img {
+        width: rem(600);
+    }
+
     h1 {
         position : absolute;
         top : 11%;
@@ -22,14 +26,14 @@
             left: 50%;
             transform: translate3d(-50%, 0px, 0px);
             @include medium-up() {
-                bottom : 0;
+                bottom : 8%;
             }
         }
     }
 
     .button {
         position : absolute;
-        bottom : rem(16);
+        bottom : rem(48);
     }
 }
 
