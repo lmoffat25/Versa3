@@ -1,4 +1,4 @@
-<div class="desc-img col-12 col-lg-10 col-xl-8 centerHz">
+<div class="desc-img col-12 col-lg-10 col-xl-9 centerHz">
         <?php if (have_rows('home_content')) :
             while (have_rows('home_content')) : the_row(); 
                 $section_title = get_sub_field( 'home_content_title' );
