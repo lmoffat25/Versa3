@@ -1,4 +1,4 @@
-<section class="newsletter col-12 col-lg-10 col-xl-9 centerHz">
+<section class="newsletter col-10 centerHz">
     <div class="newsletter__img">
         <img src="<?php echo get_field('newsletter_img','options')['url']; ?>">
         <h2><?php the_field('newsletter_title_section','options'); ?></h2>
