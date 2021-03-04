@@ -26,7 +26,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'fitbit' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="header">
 	
 	<nav class="mainNav nav -close admin-header">
             <div class="mainNav__container col-md-10 centerHz">
