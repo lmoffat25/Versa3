@@ -87,7 +87,7 @@
 </div>
 
 
-<div class="summary entry-summary" id="woocommerce-hidden">
+<div class="summary entry-summary" style="display : none;">
     <?php
     /**
      * Hook: woocommerce_single_product_summary.
