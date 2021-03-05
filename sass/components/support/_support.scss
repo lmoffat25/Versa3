@@ -1,0 +1,25 @@
+.support-page {
+  margin-top: rem(50);
+  h2 {
+    position: relative;
+    margin-bottom: rem(50);
+    &:after {
+      background-color: $black;
+      bottom: rem(-15);
+      content: '';
+      display: block;
+      height: 1px;
+      position: absolute;
+      width: 60px;
+    }
+  }
+  .form-section {
+    .col-6, .col-12 {
+      padding-left: 0;
+      margin: rem(10) 0;
+    }
+  }
+  .row {
+    flex-wrap: wrap;
+  }
+}
