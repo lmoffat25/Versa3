@@ -21,8 +21,6 @@
 ?>
 
 
-<?php get_template_part('template-parts/content-text-image'); ?>
-
 <div class="row -vcenter">
     <div class="col-12 col-md-6 col-md-push-3">
         <div class="watch">
