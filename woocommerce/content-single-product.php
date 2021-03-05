@@ -1,5 +1,3 @@
-
-
 <?php 
     $prefix                = get_field("prefix-img");
     /** @link https://developer.wordpress.org/reference/functions/wp_get_upload_dir/ */
@@ -19,7 +17,6 @@
     $dial_colors           = $attributes[$attribute_dial_color]["options"];
 
 ?>
-
 
 <?php get_template_part('template-parts/content-text-image'); ?>
 
