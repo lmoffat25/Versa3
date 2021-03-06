@@ -22,6 +22,8 @@
 
 <?php get_template_part('template-parts/content', 'text-image'); ?>
 
+<?php get_template_part('template-parts/content', 'slider'); ?>
+
 <?php get_template_part('template-parts/content', 'scroll'); ?>
 
 <section class="customisation">
@@ -80,9 +82,8 @@
 <?php get_template_part('template-parts/content', 'text-image'); ?>
 
 <?php
-    $func['tax'] = 'produit';
-
-    get_template_part('template-parts/content-functionalities-cards', null, $func);
+    $funcs['tax'] = 'produit';
+    get_template_part('template-parts/content-functionalities-cards', null, $funcs);
     
     get_template_part('template-parts/content', 'functionalities-menu',); 
     

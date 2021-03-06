@@ -2594,6 +2594,157 @@ Table des matières  :
       flex-wrap: wrap;
 }
 
+/* Slider
+--------------------------------------------- */
+#slider {
+  margin: 0 auto;
+  width: 800px;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+#slider input[type=radio] {
+  display: none;
+}
+
+#slider label {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#slides {
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+#overflow {
+  width: 100%;
+  overflow: hidden;
+}
+
+#slide1:checked ~ #slides .inner {
+  margin-left: 0;
+}
+
+#slide2:checked ~ #slides .inner {
+  margin-left: -100%;
+}
+
+#slide3:checked ~ #slides .inner {
+  margin-left: -200%;
+}
+
+#slide4:checked ~ #slides .inner {
+  margin-left: -300%;
+}
+
+#slides .inner {
+  -webkit-transition: margin-left 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: margin-left 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  width: 400%;
+  height: 700px;
+}
+
+#slides .slide {
+  width: 25%;
+  float: left;
+  display: block;
+  height: 100%;
+  color: #fff;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.slide-content {
+  padding: 10px;
+  display: block;
+}
+
+@media screen and (min-width: 640px) {
+  .slide-content {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+
+#controls {
+  margin: -130px 0 0 0;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  position: relative;
+}
+
+#controls label {
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  display: none;
+  width: 50px;
+  height: 50px;
+  opacity: .4;
+}
+
+#controls label:hover {
+  opacity: 1;
+}
+
+#slide1:checked ~ #controls label:nth-child(2),
+#slide1:checked ~ #controls label:nth-child(3),
+#slide1:checked ~ #controls label:nth-child(4),
+#slide1:checked ~ #controls label:nth-child(1) {
+  background: url(https://www.flaticon.com/svg/vstatic/svg/507/507257.svg?token=exp=1614798731~hmac=300f596fa31c4bc6a8725e0e00a5d06c) no-repeat;
+  float: right;
+  margin: 0 -50px 0 0;
+  display: block;
+}
+
+#slide1:checked ~ #controls label:nth-last-child(2),
+#slide1:checked ~ #controls label:nth-last-child(3),
+#slide1:checked ~ #controls label:nth-last-child(4),
+#slide1:checked ~ #controls label:nth-last-child(1) {
+  background: url(https://www.flaticon.com/svg/vstatic/svg/507/507257.svg?token=exp=1614798731~hmac=300f596fa31c4bc6a8725e0e00a5d06c) no-repeat;
+  float: left;
+  margin: 0 0 0 -50px;
+  display: block;
+}
+
+#bullets {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, 0px, 0px);
+          transform: translate3d(-50%, 0px, 0px);
+  z-index: 1;
+}
+
+#bullets label {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background: #C9C8CD;
+  margin: 0 10px;
+}
+
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4) {
+  background: #559BD9;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

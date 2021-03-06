@@ -1,11 +1,12 @@
 <?php
-    $args = array(  
+    $arguments = array(  
         'post_type' => 'functionalities',
         'post_status' => 'publish',
          'tax_query' => array(
             array(
                 'taxonomy' => 'display_page',
-                'terms' => 'produit'
+                'field' => 'slug',
+                'terms' => $args['tax'],
             )
         ),
     );
@@ -20,8 +21,8 @@
 <?php endif; ?>
     <div class="fonctionnalites__container centerHz">
     <?php 
-        $funcs = new WP_Query( $args ); 
-        while ( $funcs->have_posts() ) : $funcs->the_post(); 
+        $args = new WP_Query( $arguments ); 
+        while ( $args->have_posts() ) : $args->the_post(); 
             $tags = get_the_terms( get_the_id(), "functionalities_type" );
             $is_card = $tags[0]->slug;
             if ( $is_card == 'carte' ) : 
