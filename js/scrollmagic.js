@@ -11,9 +11,7 @@ var page = "";
 
 // Hauteur de l'écran
 var screenH = window.innerHeight;
-let offset = screenH / 6; // Décallage entre deux triggers
-
-
+var offset = screenH / 6; // Default value
 
 var main = function() {
     if ( triggers == undefined ) {
@@ -22,6 +20,12 @@ var main = function() {
     }
     // Vérifie la page actuelle
     checkPage();
+    // Applique un décallage entre 2 triggers : chiffre + grand = écart + petit
+    if ( page === avantage ) {
+        offset = screenH / 30; 
+    }else if ( page === about ) {
+        offset = screenH / 6;
+    }
     // Donne taille du scroll
     if ( page === avantage ) {
         var scrollLength = 1000;
@@ -46,10 +50,15 @@ var checkPage = function() {
 
 
 var scroll = function(scrollLength) {
+    if ( page === avantage ) { // Nouvel ajout, réduit la longeur de page pour avantages
+        //var scrollLength = scrollLength / 2;
+    }
+
     var image = new ScrollMagic.Scene({triggerElement: "#trigger1", duration : scrollLength})
                     .setPin("#pin1")
                     //.addIndicators({name: "1 (duration: "+ scrollLength +")"}) // add indicators (requires plugin)
                     .addTo(controller);
+
 }
 
 
