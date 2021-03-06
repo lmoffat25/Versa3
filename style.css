@@ -2008,8 +2008,14 @@ Table des matières  :
 
 /* Customisation module
 --------------------------------------------- */
-.customisation__image {
-  width: 28.125rem;
+.customisation .watch {
+  height: 50vh;
+  position: relative;
+  width: 50vh;
+}
+
+.customisation .watch__dial {
+  position: absolute;
 }
 
 .customisation__details {
@@ -2055,7 +2061,7 @@ Table des matières  :
 }
 
 .customisation__size .customisation__btn:hover, .customisation__size .customisation__btn.-active {
-  font-weight: 600;
+  text-decoration: underline;
 }
 
 .customisation__size .customisation__btn:not(:last-of-type) {
@@ -2082,17 +2088,28 @@ Table des matières  :
   background: #215F96;
 }
 
-.customisation__btn.-strap span.-color-beige, .customisation__btn.-body span.-color-beige {
-  background: #EDD0D0;
+.customisation__btn.-strap span.-color-or, .customisation__btn.-body span.-color-or {
+  background: #fff9c0;
 }
 
-.customisation__btn.-strap span.-color-gris, .customisation__btn.-body span.-color-gris {
-  background: #EDD0D0;
+.customisation__btn.-strap span.-color-noir, .customisation__btn.-body span.-color-noir {
+  background: #212121;
 }
 
 .customisation__btn.-body span {
   border-radius: 0.3125rem;
+}
+
+.customisation__btn.-body span.-color-bleu {
+  background: #215F96;
+}
+
+.customisation__btn.-body span.-color-rose {
   background: #EDD0D0;
+}
+
+.customisation__btn.-body span.-color-noir {
+  background: #212121;
 }
 
 .customisation .customisation__elements {

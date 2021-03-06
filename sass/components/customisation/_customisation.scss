@@ -1,7 +1,12 @@
 .customisation {
 
-    &__image {
-        width: rem(450);
+    .watch {
+        height: 50vh;
+        position: relative;
+        width: 50vh;
+        &__dial {
+            position: absolute;
+        }
     }
 
     // Container
@@ -52,7 +57,7 @@
         .customisation__btn {
 
             &:hover, &.-active {
-                font-weight : 600;
+                text-decoration: underline;
             }
             &:not(:last-of-type) {
                 
@@ -81,12 +86,12 @@
                     background : #215F96;
                 }
 
-                &.-color-beige {
-                    background : #EDD0D0;
+                &.-color-or {
+                    background : $color__background-ins;
                 }
 
-                &.-color-gris {
-                    background : #EDD0D0;
+                &.-color-noir {
+                    background : $black;
                 }
                 
             }
@@ -95,8 +100,17 @@
         &.-body {
             span {
                 border-radius : rem(5);
-                background : #EDD0D0;
-            
+                &.-color-bleu {
+                    background : #215F96;
+                }
+
+                &.-color-rose {
+                    background : #EDD0D0;
+                }
+
+                &.-color-noir {
+                    background : $black;
+                }
             }
 
         }

@@ -1,7 +1,7 @@
 <?php 
     $prefix                = get_field("prefix-img");
     /** @link https://developer.wordpress.org/reference/functions/wp_get_upload_dir/ */
-    $upload_dir            = wp_get_upload_dir()["baseurl"] . "/" . $prefix . "-"  ;
+    $upload_dir            = wp_get_upload_dir()["baseurl"] . "/" . $prefix   ;
     /** @link https://developer.wordpress.org/reference/functions/get_the_id/  */
     $idProduct             = get_the_ID();
     /** @link https://woocommerce.github.io/code-reference/namespaces/default.html#function_wc_get_product */
@@ -25,7 +25,7 @@
     $args['row'] = 0;
     get_template_part('template-parts/content', 'text-image', $args); ?>
 
-<?php get_template_part('template-parts/content', 'slider'); ?>
+<?php  get_template_part('template-parts/content', 'slider'); ?>
 
 <?php get_template_part('template-parts/content', 'scroll'); ?>
 
@@ -38,14 +38,14 @@
                 <?php else:  ?>
                     <img class="watch__dial" data-source="<?php echo $upload_dir ?>cadran-{color}.png" src="<?php echo $upload_dir ?>cadran-noir.png" alt="">
                 <?php endif; ?>
-                <?php if ($default_attributes[$attribute_strap_color]) : ?>
+                <?php if ($attributes[$attribute_strap_color]) : ?>
                     <img class="watch__strap" data-source="<?php echo $upload_dir ?>bracelet-{color}.png" src="<?php echo $upload_dir ?>bracelet-<?php echo $default_attributes[$attribute_strap_color]?>.png" alt="">
                 <?php else:  ?>
                     <img class="watch__strap" data-source="<?php echo $upload_dir ?>bracelet-{color}.png" src="<?php echo $upload_dir ?>bracelet-orange.png" alt="">
                 <?php endif; ?>
             </div>
         </div>
-
+            <!-- Tailles de la montre -->
             <ul id="watch-size" class="c-colorDots customisation__details customisation__size">
                 <?php foreach($dial_sizes as $dial_size) : ?>
                     <?php
@@ -54,36 +54,38 @@
                     <li data-attribute="<?php echo $attribute_dial_size; ?>" data-value="<?php echo $dial_size; ?>" class="c-dots__item filterItem customisation__btn -size <?php echo $isActive; ?>"> <?php echo $dial_size ?> mm</li>
                 <?php endforeach; ?>
             </ul>
-
+            <!-- Couleurs du BRACELET -->
             <ul id="strap-color" class="c-colorDots customisation__details customisation__bands -colors">
                 <?php foreach($strap_colors as $strap_color) : ?>
                     <?php
                         $isActive = ($default_attributes[$attribute_strap_color] == $strap_color) ? "-active" : "";
                         $classname = strtolower($strap_color) 
                     ?>
-                    <li data-attribute="<?php echo $attribute_strap_color; ?>" data-value="<?php echo $strap_color; ?>" class="c-colorDots__item filterItem customisation__btn -strap -<?php echo $classname; ?>  <?php echo $isActive; ?>"><span class="-color-<?php echo $strap_colors; ?>"></span></li>
+                    <li data-attribute="<?php echo $attribute_strap_color; ?>" data-value="<?php echo $strap_color; ?>" class="c-colorDots__item filterItem customisation__btn -strap -<?php echo $classname; ?>  <?php echo $isActive; ?>"><span class="-color-<?php echo $strap_color; ?>"></span></li>
                 <?php endforeach; ?>
             </ul>
-
+            <!-- Couleurs du CADRAN -->
             <ul id="body-color" class="c-colorDots customisation__details customisation__bodies -colors">
-                <?php foreach($dial_colors as $dial_colors) : ?>
+                <?php foreach($dial_colors as $dial_color) : ?>
                     <?php
-                        $isActive = ($default_attributes[$attribute_dial_colors] == $dial_colors) ? "-active" : "";
+                        $isActive = ($default_attributes[$attribute_dial_color] == $dial_color) ? "-active" : "";
+                        $classname = strtolower($dial_color)
                     ?>
-                    <li data-attribute="<?php echo $attribute_dial_colors; ?>" data-value="<?php echo $dial_colors; ?>" class="c-dots__item filterItem customisation__btn -body <?php echo $isActive; ?>"><span class="-color-<?php echo $dial_colors; ?>"></span></li>
+                    <li data-attribute="<?php echo $attribute_dial_color; ?>" data-value="<?php echo $dial_color; ?>" class="c-colorDots__item filterItem customisation__btn -body -<?php echo $classname; ?>  <?php echo $isActive; ?>"><span class="-color-<?php echo $dial_color; ?>"></span></li>
                 <?php endforeach; ?>
             </ul>
 
             <div id="custom_elements" class="customisation__elements">
                 <span data-id="watch-size" class="customisation__btn button -alt -big">Taille</span>
-                <span data-id="strap-color" class="customisation__btn button -alt -big">Cadran</span>
-                <span data-id="body-color" class="customisation__btn button -alt -big">Bracelet</span>
+                <span data-id="strap-color" class="customisation__btn button -alt -big">Bracelet</span>
+                <span data-id="body-color" class="customisation__btn button -alt -big">Cadran</span>
             </div>
+            <span id="add-product-to-cart" class="button -alt -big">Ajouter au panier</span>
         </form>
 </section>
 
 <?php 
-    $args['row'] = 0;
+    $args['row'] = 1;
     get_template_part('template-parts/content', 'text-image', $args); ?>
 
 <?php

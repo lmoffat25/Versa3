@@ -1,9 +1,6 @@
 <section class="desc-img col-12 col-lg-10 col-xl-9 centerHz">
-    <?php 
-        $row = get_field('flexible_sections')[$args['row']];
-    ?>
         <?php if (have_rows('flexible_sections')) :
-    
+                $row = get_field('flexible_sections')[$args['row']];
                     $section_title = $row['text_img-title'];
                     $section_image = $row['text_img-image']['sizes']['large'];
                     $section_desc = $row['text_img-content'];
@@ -20,5 +17,7 @@
                     </div>
                     <div class="desc-img__image col-12 col-md-7"><img src="<?php echo $section_image; ?>"></div>
                 </div>
+                <?php else : ?>
+                    <h2>Ne marche pas</h2>
        <?php endif; ?>
 </section>
