@@ -129,7 +129,7 @@ function fitbit_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'fitbit_widgets_init' );
+//add_action( 'widgets_init', 'fitbit_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
@@ -138,6 +138,7 @@ function fitbit_scripts() {
 	wp_enqueue_style( 'fitbit-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'fitbit-style', 'rtl', 'replace' );
 	wp_enqueue_script( 'scrollmagicLib', get_template_directory_uri() . '/js/libraries/ScrollMagic.min.js', array(), '2.0', true);
+	wp_enqueue_script( 'scrollmagicAddon', get_template_directory_uri() . '/js/libraries/debug.addIndicators.min.js', array(), '2.0', true);
 	wp_enqueue_script( 'scrollmagic', get_template_directory_uri() . '/js/scrollmagic.js', array(), '2.0', true);
 	wp_enqueue_script( 'customisation', get_template_directory_uri() . '/js/customisation.js', array(), '2.0', true);
 	wp_enqueue_script( 'progressBar', get_template_directory_uri() . '/js/loadingbar.js', array(), '2.0', true);

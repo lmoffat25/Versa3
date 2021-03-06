@@ -77,12 +77,18 @@
                 background : #EDD0D0;
                 display: block;
             
-                &.-num2 {
+                &.-color-bleu {
                     background : #215F96;
                 }
-                &.-num3 {
-                    background : #8b8282;
+
+                &.-color-beige {
+                    background : #EDD0D0;
                 }
+
+                &.-color-gris {
+                    background : #EDD0D0;
+                }
+                
             }
         }
 
@@ -91,12 +97,6 @@
                 border-radius : rem(5);
                 background : #EDD0D0;
             
-                &.-num2 {
-                    background : #215F96;
-                }
-                &.-num3 {
-                    background : #8b8282;
-                }
             }
 
         }

@@ -444,6 +444,10 @@ p, h1, h2, h3, h4, h5, h6, ul {
           box-sizing: border-box;
 }
 
+.wpcf7-response-output {
+  border: 1px solid #E90000 !important;
+}
+
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
@@ -720,6 +724,7 @@ Table des matières  :
   border: none;
   border-bottom: 0.0625rem solid #C9C8CD;
   padding-bottom: 0.625rem;
+  max-width: 100%;
 }
 
 .input:focus {
@@ -882,7 +887,14 @@ Table des matières  :
   background-color: #E4E4E4;
   border-radius: 0.3125rem;
   cursor: pointer;
+  margin: 0.9375rem 0;
   width: 19.375rem;
+}
+
+@media screen and (max-width: 640px) {
+  .dropdownCustom {
+    width: 100%;
+  }
 }
 
 .dropdownCustom .fa:before {
@@ -1644,6 +1656,12 @@ Table des matières  :
   width: -webkit-fill-available;
 }
 
+.mainNav {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+}
+
 @media screen and (max-width: 960px) {
   .mainNav {
     position: fixed;
@@ -2022,25 +2040,21 @@ Table des matières  :
   display: block;
 }
 
-.customisation__btn.-strap span.-num2, .customisation__btn.-body span.-num2 {
+.customisation__btn.-strap span.-color-bleu, .customisation__btn.-body span.-color-bleu {
   background: #215F96;
 }
 
-.customisation__btn.-strap span.-num3, .customisation__btn.-body span.-num3 {
-  background: #8b8282;
+.customisation__btn.-strap span.-color-beige, .customisation__btn.-body span.-color-beige {
+  background: #EDD0D0;
+}
+
+.customisation__btn.-strap span.-color-gris, .customisation__btn.-body span.-color-gris {
+  background: #EDD0D0;
 }
 
 .customisation__btn.-body span {
   border-radius: 0.3125rem;
   background: #EDD0D0;
-}
-
-.customisation__btn.-body span.-num2 {
-  background: #215F96;
-}
-
-.customisation__btn.-body span.-num3 {
-  background: #8b8282;
 }
 
 .customisation .customisation__elements {
@@ -2509,6 +2523,37 @@ Table des matières  :
 
 .product-header__subtitle {
   color: #F2F2F2;
+}
+
+/* Support
+--------------------------------------------- */
+.support-page {
+  margin-top: 3.125rem;
+}
+
+.support-page h2 {
+  position: relative;
+  margin-bottom: 3.125rem;
+}
+
+.support-page h2:after {
+  background-color: #212121;
+  bottom: -0.9375rem;
+  content: '';
+  display: block;
+  height: 1px;
+  position: absolute;
+  width: 60px;
+}
+
+.support-page .form-section .col-6, .support-page .form-section .col-12 {
+  padding-left: 0;
+  margin: 0.625rem 0;
+}
+
+.support-page .row {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 /*--------------------------------------------------------------

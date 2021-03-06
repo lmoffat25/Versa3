@@ -56,16 +56,16 @@
                         $isActive = ($default_attributes[$attribute_strap_color] == $strap_color) ? "-active" : "";
                         $classname = strtolower($strap_color) 
                     ?>
-                    <li data-attribute="<?php echo $attribute_strap_color; ?>" data-value="<?php echo $strap_color; ?>" class="c-colorDots__item filterItem customisation__btn -strap -<?php echo $classname; ?>  <?php echo $isActive; ?>"></li>
+                    <li data-attribute="<?php echo $attribute_strap_color; ?>" data-value="<?php echo $strap_color; ?>" class="c-colorDots__item filterItem customisation__btn -strap -<?php echo $classname; ?>  <?php echo $isActive; ?>"><span class="-color-<?php echo $strap_colors; ?>"></span></li>
                 <?php endforeach; ?>
             </ul>
 
             <ul id="body-color" class="c-colorDots customisation__details customisation__bodies -colors">
-                <?php foreach($dial_sizes as $dial_size) : ?>
+                <?php foreach($dial_colors as $dial_colors) : ?>
                     <?php
-                        $isActive = ($default_attributes[$attribute_dial_size] == $dial_size) ? "-active" : "";
+                        $isActive = ($default_attributes[$attribute_dial_colors] == $dial_colors) ? "-active" : "";
                     ?>
-                    <li data-attribute="<?php echo $attribute_dial_size; ?>" data-value="<?php echo $dial_size; ?>" class="c-dots__item filterItem customisation__btn -body <?php echo $isActive; ?>"> <?php echo $dial_size ?></li>
+                    <li data-attribute="<?php echo $attribute_dial_colors; ?>" data-value="<?php echo $dial_colors; ?>" class="c-dots__item filterItem customisation__btn -body <?php echo $isActive; ?>"><span class="-color-<?php echo $dial_colors; ?>"></span></li>
                 <?php endforeach; ?>
             </ul>
 
