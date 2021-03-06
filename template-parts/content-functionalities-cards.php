@@ -11,7 +11,6 @@
         ),
     );
     $section_title = get_field( "functionalities_title" );
-    $get_card_title = get_field( "functionality_show_title" );
 ?>
 <!-- Fonctionnalités -->
 
@@ -25,6 +24,7 @@
         while ( $args->have_posts() ) : $args->the_post(); 
             $tags = get_the_terms( get_the_id(), "functionalities_type" );
             $is_card = $tags[0]->slug;
+            $get_card_title = get_field( "functionnality_show_title" );
             if ( $is_card == 'carte' ) : 
             ?>
                 <div class="fonctionnalites__image col-6 col-md-3">

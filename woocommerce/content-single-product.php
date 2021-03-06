@@ -15,12 +15,15 @@
     $dial_sizes            = $attributes[$attribute_dial_size]["options"];
     $strap_colors          = $attributes[$attribute_strap_color]["options"];
     $dial_colors           = $attributes[$attribute_dial_color]["options"];
-    $funcs = array();
+    $args = array();
 
 ?>
 <?php get_template_part('template-parts/content', 'header'); ?>
 
-<?php get_template_part('template-parts/content', 'text-image'); ?>
+
+<?php 
+    $args['row'] = 0;
+    get_template_part('template-parts/content', 'text-image', $args); ?>
 
 <?php get_template_part('template-parts/content', 'slider'); ?>
 
@@ -79,11 +82,13 @@
         </form>
 </section>
 
-<?php get_template_part('template-parts/content', 'text-image'); ?>
+<?php 
+    $args['row'] = 0;
+    get_template_part('template-parts/content', 'text-image', $args); ?>
 
 <?php
-    $funcs['tax'] = 'produit';
-    get_template_part('template-parts/content-functionalities-cards', null, $funcs);
+    $args['tax'] = 'produit';
+    get_template_part('template-parts/content-functionalities-cards', null, $args);
     
     get_template_part('template-parts/content', 'functionalities-menu',); 
     
