@@ -136,6 +136,7 @@ function fitbit_widgets_init() {
  */
 function fitbit_scripts() {
 	wp_enqueue_style( 'fitbit-style', get_stylesheet_uri(), array(), _S_VERSION );
+    wp_enqueue_style( 'woocommerce-style', get_template_directory_uri() .'dist/css/woocommerce.css' );
 	wp_style_add_data( 'fitbit-style', 'rtl', 'replace' );
 	wp_enqueue_script( 'scrollmagicLib', get_template_directory_uri() . '/js/libraries/ScrollMagic.min.js', array(), '2.0', true);
 	wp_enqueue_script( 'scrollmagicAddon', get_template_directory_uri() . '/js/libraries/debug.addIndicators.min.js', array(), '2.0', true);
