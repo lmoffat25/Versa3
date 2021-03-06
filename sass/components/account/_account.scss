@@ -1,0 +1,65 @@
+.account {
+  margin-top: rem(50);
+  h2 {
+    position: relative;
+    margin-bottom: rem(50);
+    &:after {
+      background-color: $black;
+      bottom: rem(-15);
+      content: '';
+      display: block;
+      height: 1px;
+      position: absolute;
+      width: 60px;
+    }
+  }
+  > .row {
+    flex-wrap: wrap;
+  }
+  .col-2, .col-3, .col-md-3, .col-6, .col-md-8 {
+    padding-left: 0;
+  }
+  .account__defi {
+    background-color: $white;
+    border-radius : rem(5);
+    &-content {
+      padding: rem(2) rem(10);
+      p {
+        text-align: center;
+      }
+    }
+    img {
+      border-top: 6px solid $primary-color;
+      display: block;
+    }
+  }
+  .account__training {
+    margin-top: rem(20);
+    .row {
+      align-items: center;
+      border: 1px solid $primary-color;
+      border-radius: rem(5);
+      padding: rem(10);
+    }
+    &-icon {
+      padding-right: 0;
+    }
+  }
+  .account__stats {
+    margin-left: rem(20);
+    &-date {
+      color: $primary-color;
+    }
+    &-item {
+      border-bottom: 1px solid $primary-color;
+      padding-bottom: rem(5);
+      margin-right: rem(30);
+      .name {
+        font-weight: bold;
+      }
+      .row {
+        align-items: center;
+      }
+    }
+  }
+}
