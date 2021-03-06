@@ -1644,11 +1644,6 @@ Table des matières  :
   width: -webkit-fill-available;
 }
 
-.mainNav {
-  z-index: 999;
-  position: fixed;
-}
-
 @media screen and (max-width: 960px) {
   .mainNav {
     position: fixed;
@@ -1955,10 +1950,152 @@ Table des matières  :
   margin: 0 0 1.5em;
 }
 
+/* Customisation module
+--------------------------------------------- */
+.customisation__image {
+  width: 28.125rem;
+}
+
+.customisation__details {
+  color: #F2F2F2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 40px;
+  list-style: none;
+  padding-left: 0;
+  width: 150px;
+}
+
+.customisation__details .customisation__btn {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.customisation__details .customisation__btn:not(:last-of-type) {
+  border-right: 0.125rem solid #F2F2F2;
+}
+
+.customisation__details.-colors .customisation__btn:hover span {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.customisation__details.-colors .customisation__btn.-active span {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.customisation__details:not(:first-of-type) {
+  display: none;
+}
+
+.customisation__size .customisation__btn:hover, .customisation__size .customisation__btn.-active {
+  font-weight: 600;
+}
+
+.customisation__size .customisation__btn:not(:last-of-type) {
+  padding-right: 1.25rem;
+}
+
+.customisation__btn.-strap, .customisation__btn.-body {
+  width: 2.625rem;
+  height: 2.625rem;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.customisation__btn.-strap span, .customisation__btn.-body span {
+  width: 80%;
+  height: 80%;
+  padding: 0.1875rem;
+  border-radius: 50%;
+  background: #EDD0D0;
+  display: block;
+}
+
+.customisation__btn.-strap span.-num2, .customisation__btn.-body span.-num2 {
+  background: #215F96;
+}
+
+.customisation__btn.-strap span.-num3, .customisation__btn.-body span.-num3 {
+  background: #8b8282;
+}
+
+.customisation__btn.-body span {
+  border-radius: 0.3125rem;
+  background: #EDD0D0;
+}
+
+.customisation__btn.-body span.-num2 {
+  background: #215F96;
+}
+
+.customisation__btn.-body span.-num3 {
+  background: #8b8282;
+}
+
+.customisation .customisation__elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 31.25rem;
+}
+
+.bg-triangle {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  height: 600px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+}
+
+.bg-triangle:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 30vh 50vw;
+  border-bottom-color: #35436A;
+  border-right-color: #35436A;
+  z-index: -1;
+}
+
 /* Contenus Flexibles
 --------------------------------------------- */
 .desc-img {
   margin: 20px auto !important;
+}
+
+.desc-img__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
 }
 
 @media screen and (min-width: 640px) {
@@ -1967,6 +2104,14 @@ Table des matières  :
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+.desc-img:first-of-type .desc-img__container:last-of-type {
+  display: none;
+}
+
+.desc-img:nth-of-type(2) .desc-img__container:first-of-type {
+  display: none;
 }
 
 /* Newsletter
@@ -2207,6 +2352,80 @@ Table des matières  :
   display: block;
 }
 
+/* Scroll
+--------------------------------------------- */
+.avantages {
+  position: relative;
+}
+
+.avantages > h2 {
+  text-align: center;
+}
+
+.avantages #trigger1 {
+  position: absolute;
+  top: calc(20%);
+}
+
+.avantages #trigger2 {
+  position: absolute;
+  top: calc(40%);
+}
+
+.avantages #trigger3 {
+  position: absolute;
+  top: calc(60%);
+}
+
+.avantages #trigger4 {
+  position: absolute;
+  top: calc(80%);
+}
+
+.avantages #trigger5 {
+  position: absolute;
+  top: calc(100%);
+}
+
+.avantages__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.avantages__content #txt3, .avantages__content #txt2 {
+  top: 50%;
+}
+
+.avantages__content-left, .avantages__content-right {
+  position: relative;
+}
+
+.avantages__content-left > *, .avantages__content-right > * {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+}
+
+.avantages__content-left > *.-active, .avantages__content-right > *.-active {
+  opacity: 1;
+}
+
+.avantages__content-left > div {
+  border-right: 2px solid #559bd9;
+  padding-right: 2rem;
+}
+
+.avantages__content-right > div {
+  border-left: 2px solid #559bd9;
+  padding-left: 2rem;
+}
+
 /* Widgets
 --------------------------------------------- */
 .widget {
@@ -2241,7 +2460,7 @@ Table des matières  :
   width: 37.5rem;
 }
 
-.top-banner h1 {
+.top-banner .top-banner_title {
   position: absolute;
   top: 11%;
   height: -webkit-fill-available;
@@ -2251,12 +2470,12 @@ Table des matières  :
 }
 
 @media screen and (min-width: 640px) {
-  .top-banner h1 {
+  .top-banner .top-banner_title {
     top: 0;
   }
 }
 
-.top-banner h1 span {
+.top-banner .top-banner_title span {
   position: absolute;
   bottom: 30%;
   width: -webkit-max-content;
@@ -2268,7 +2487,7 @@ Table des matières  :
 }
 
 @media screen and (min-width: 640px) {
-  .top-banner h1 span {
+  .top-banner .top-banner_title span {
     bottom: 8%;
   }
 }
@@ -2276,6 +2495,20 @@ Table des matières  :
 .top-banner .button {
   position: absolute;
   bottom: 3rem;
+}
+
+.product-header {
+  background-image: url("images/product_page.png");
+}
+
+.product-header__title {
+  font-size: 5.625rem;
+  color: #F2F2F2;
+  text-transform: uppercase;
+}
+
+.product-header__subtitle {
+  color: #F2F2F2;
 }
 
 /*--------------------------------------------------------------

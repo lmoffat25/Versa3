@@ -1,15 +1,27 @@
 <?php
+echo $funcs['tax'];
     $args = array(  
         'post_type' => 'functionalities',
         'post_status' => 'publish',
+         'tax_query' => array(
+            array(
+                'taxonomy' => 'display_page',
+                'terms' => $funcs['tax']
+            )
+        ),
     );
+    echo '<pre>';
+    print_r($args['tax_query'][0]['terms']);
+    echo '</pre>';
     $section_title = get_field( "functionalities_title" );
     $get_card_title = get_field( "functionality_show_title" );
 ?>
 <!-- Fonctionnalités -->
 
 <section class="fonctionnalites col-12 col-lg-10 col-xl-9">
-    <h2><?php if($section_title != null) : echo $section_title; endif;?></h2>
+<?php if($section_title != null) : ?>
+    <h2><?php echo $section_title; ?></h2>
+<?php endif; ?>
     <div class="fonctionnalites__container centerHz">
     <?php 
         $funcs = new WP_Query( $args ); 

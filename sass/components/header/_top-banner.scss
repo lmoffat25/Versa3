@@ -10,7 +10,7 @@
         width: rem(600);
     }
 
-    h1 {
+    .top-banner_title {
         position : absolute;
         top : 11%;
         height : fill-available;
@@ -34,6 +34,18 @@
     .button {
         position : absolute;
         bottom : rem(48);
+    }
+}
+
+.product-header {
+    background-image : url("images/product_page.png");
+    &__title {
+        font-size : rem(90);
+        color : $white;
+        text-transform : uppercase;
+    }
+    &__subtitle {
+        color : $white;
     }
 }
 

@@ -1,0 +1,134 @@
+.customisation {
+
+    &__image {
+        width: rem(450);
+    }
+
+    // Container
+    &__details {
+        color : $white;
+        display : flex;
+        justify-content : space-between;
+        height : 40px;
+        list-style : none;
+        padding-left : 0;
+        width : 150px;
+        
+        .customisation__btn {
+            cursor : pointer;
+            display : flex;
+            align-items : center;
+
+            &:not(:last-of-type) {
+                border-right : rem(2) solid $white;
+            }
+        }
+
+        // Adds border on active buttons for colour selectors 
+        &.-colors {
+            .customisation__btn {
+
+                &:hover {
+                    span {
+                        transform: scale(.9);
+                    }
+                }
+
+                &.-active {
+                    span {
+                        transform: scale(.8);
+                    }
+                }
+            }
+        }
+
+    }
+
+    &__details:not(:first-of-type) {
+        display : none;
+    }
+
+    &__size {
+        .customisation__btn {
+
+            &:hover, &.-active {
+                font-weight : 600;
+            }
+            &:not(:last-of-type) {
+                
+                padding-right : rem(20);
+            }
+        }
+    }
+
+
+    // Customisation Button
+    &__btn {
+        &.-strap, &.-body {
+            width : rem(42);
+            height : rem(42);
+            box-sizing: content-box;
+
+            span {
+                width : 80%;
+                height : 80%;
+                padding : rem(3);
+                border-radius : 50%;
+                background : #EDD0D0;
+                display: block;
+            
+                &.-num2 {
+                    background : #215F96;
+                }
+                &.-num3 {
+                    background : #8b8282;
+                }
+            }
+        }
+
+        &.-body {
+            span {
+                border-radius : rem(5);
+                background : #EDD0D0;
+            
+                &.-num2 {
+                    background : #215F96;
+                }
+                &.-num3 {
+                    background : #8b8282;
+                }
+            }
+
+        }
+    }
+
+    // Elements buttons Container
+    .customisation__elements {
+        display : flex;
+        justify-content : space-between;
+        width : rem(500);
+    }
+
+}
+
+.bg-triangle {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    height: 600px;
+    justify-content: space-evenly;
+    position: relative;
+    
+    &:before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-style: solid;
+        border-color: transparent;
+        border-width: 30vh 50vw;
+        border-bottom-color: $primary-color-dark;
+        border-right-color: $primary-color-dark;
+        z-index: -1;
+    }
+}
