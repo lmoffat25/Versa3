@@ -2,15 +2,25 @@
     $args = array(  
         'post_type' => 'functionalities',
         'post_status' => 'publish',
-        'posts_per_page' => 4,
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'functionalities_type',
+                'terms' => 'menu'
+            )
+        ),
     );
+    $section_title = get_field( "functionalites_menu-title" );
 ?>
-<section>
+<section class="fucntionalities-menu">
 <?php
+    if($section_title != null) : ?>
+    <h2><?php echo $section_title; ?></h2>
+<?php endif;
     $funcs = new WP_Query( $args ); 
     while ( $funcs->have_posts() ) : $funcs->the_post(); 
         $tags = get_the_terms( get_the_id(), "functionalities_type" );
         $is_menu = $tags[0]->slug;
+
         if ( $is_menu == 'menu' ) :
 ?>
         <div class="dropdownCustom -functionalities">

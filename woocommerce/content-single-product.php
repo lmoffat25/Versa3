@@ -80,10 +80,14 @@
 <?php get_template_part('template-parts/content', 'text-image'); ?>
 
 <?php
-    $funcs['tax'] = 'produit'; ?>
-<?php get_template_part('template-parts/content', 'functionalities-cards', $funcs); ?>
+    $func['tax'] = 'produit';
 
-
+    get_template_part('template-parts/content-functionalities-cards', null, $func);
+    
+    get_template_part('template-parts/content', 'functionalities-menu',); 
+    
+    get_template_part('template-parts/content', 'app',); ?>
+    
 
 <div class="summary entry-summary">
     <?php

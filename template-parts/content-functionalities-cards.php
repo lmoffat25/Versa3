@@ -1,18 +1,14 @@
 <?php
-echo $funcs['tax'];
     $args = array(  
         'post_type' => 'functionalities',
         'post_status' => 'publish',
          'tax_query' => array(
             array(
                 'taxonomy' => 'display_page',
-                'terms' => $funcs['tax']
+                'terms' => 'produit'
             )
         ),
     );
-    echo '<pre>';
-    print_r($args['tax_query'][0]['terms']);
-    echo '</pre>';
     $section_title = get_field( "functionalities_title" );
     $get_card_title = get_field( "functionality_show_title" );
 ?>
