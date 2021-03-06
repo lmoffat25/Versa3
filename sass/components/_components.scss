@@ -10,6 +10,10 @@
 --------------------------------------------- */
 @import "content/posts-and-pages";
 
+/* Customisation module
+--------------------------------------------- */
+@import "customisation/customisation";
+
 /* Contenus Flexibles
 --------------------------------------------- */
 @import "flex-content/img_desc";
@@ -29,6 +33,10 @@
 /* Comments
 --------------------------------------------- */
 @import "comments/comments";
+
+/* Scroll
+--------------------------------------------- */
+@import "scrollblock/scrollblock";
 
 /* Widgets
 --------------------------------------------- */

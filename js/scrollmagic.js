@@ -48,7 +48,7 @@ var checkPage = function() {
 var scroll = function(scrollLength) {
     var image = new ScrollMagic.Scene({triggerElement: "#trigger1", duration : scrollLength})
                     .setPin("#pin1")
-                    // .addIndicators({name: "1 (duration: "+ scrollLength +")"}) // add indicators (requires plugin)
+                    //.addIndicators({name: "1 (duration: "+ scrollLength +")"}) // add indicators (requires plugin)
                     .addTo(controller);
 }
 
@@ -58,7 +58,7 @@ var active = function(scrollLength) {
     for( var i = 1; i < triggerlength + 1; i++ ) {
         var image = new ScrollMagic.Scene({triggerElement: "#trigger" + i, duration : scrollInterval - offset})
         .setClassToggle("#txt" + i, "-active")
-        // .addIndicators({name: i + "(duration:"+ scrollInterval +")"})
+        //.addIndicators({name: i + "(duration:"+ scrollInterval +")"})
         .addTo(controller);
     }
 }

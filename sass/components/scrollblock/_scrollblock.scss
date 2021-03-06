@@ -1,0 +1,51 @@
+.avantages {
+    position : relative;
+    >h2 {
+        text-align : center;
+    }
+
+    @for $i from 1 through $triggerlength + 1 {
+        #trigger#{$i} {
+            position : absolute;
+            top : calc(#{$i * 2}0%);
+        }
+    }
+
+
+    &__content {
+        display : flex;
+
+        #txt3, #txt2 {
+            top : 50%;
+        }
+
+        &-left, &-right {
+            position : relative;
+            >* {
+                position : absolute;
+                top : 0;
+                left : 50%;
+                transform : translateX(-50%);
+                opacity : 0;
+                transition : opacity .5s ease-in-out;
+
+                &.-active {
+                    opacity : 1;
+                }
+            }
+        }
+
+        &-left {
+            >div {
+                border-right : 2px solid $primary-color;
+                padding-right :2rem;
+            }
+        }
+        &-right {
+            >div {
+                border-left : 2px solid $primary-color;
+                padding-left :2rem;
+            }
+        }
+    }
+}

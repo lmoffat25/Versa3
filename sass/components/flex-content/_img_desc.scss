@@ -1,7 +1,24 @@
 .desc-img {
     margin: 20px auto !important;
 
+    &__container {
+        display: flex;
+        flex-flow : wrap;
+    }
+
     @include medium-up() {
         display : flex;
+    }
+
+    &:first-of-type {
+        .desc-img__container:last-of-type {
+            display: none;
+        }
+    }
+
+    &:nth-of-type(2) {
+        .desc-img__container:first-of-type {
+            display: none;
+        }
     }
 }

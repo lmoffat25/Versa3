@@ -139,6 +139,7 @@ function fitbit_scripts() {
 	wp_style_add_data( 'fitbit-style', 'rtl', 'replace' );
 	wp_enqueue_script( 'scrollmagicLib', get_template_directory_uri() . '/js/libraries/ScrollMagic.min.js', array(), '2.0', true);
 	wp_enqueue_script( 'scrollmagic', get_template_directory_uri() . '/js/scrollmagic.js', array(), '2.0', true);
+	wp_enqueue_script( 'customisation', get_template_directory_uri() . '/js/customisation.js', array(), '2.0', true);
 	wp_enqueue_script( 'progressBar', get_template_directory_uri() . '/js/loadingbar.js', array(), '2.0', true);
 	wp_enqueue_script( 'dropdownMenu', get_template_directory_uri() . '/js/menu-deroulant.js', array(), '2.0', true);
 	wp_enqueue_script( 'progressBar', get_template_directory_uri() . '/js/main-menu.js', array(), '2.0', true);
