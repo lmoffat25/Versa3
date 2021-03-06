@@ -3,11 +3,11 @@
     $args = array();
 
     get_header();
-    // booh
 
     get_template_part( 'template-parts/content', 'header' );
 
-    get_template_part( 'template-parts/content', 'text-image' );
+    $args['row'] = 0;
+    get_template_part( 'template-parts/content', 'text-image', $args );
 
     get_template_part( 'template-parts/content', 'reinssurance' );
 

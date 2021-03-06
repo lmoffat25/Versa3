@@ -1,12 +1,15 @@
 <section class="desc-img col-12 col-lg-10 col-xl-9 centerHz">
-        <?php if (have_rows('flexible_sections')) :
-                $row = get_field('flexible_sections')[$args['row']];
-                    $section_title = $row['text_img-title'];
-                    $section_image = $row['text_img-image']['sizes']['large'];
-                    $section_desc = $row['text_img-content'];
-                    $has_button = $row['text_img-button'];
-                    $button_url = $row['text_img-url_button'];
-                ?>
+        <?php if ( have_rows('flexible_sections') ) :
+                if ( !empty($args) ) :
+                    $row = get_field('flexible_sections')[$args['row']];
+                else :
+                    $row = 0;
+                endif;
+                $section_title = $row['text_img-title'];
+                $section_image = $row['text_img-image']['sizes']['large'];
+                $section_desc = $row['text_img-content'];
+                $has_button = $row['text_img-button'];
+                $button_url = $row['text_img-url_button']; ?>
                 <div class="desc-img__container col-12">
                     <div class="desc-img__content col-12 col-md-5">
                         <h2 class="title_h2"><?php echo $section_title; ?></h2>
