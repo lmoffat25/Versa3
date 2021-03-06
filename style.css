@@ -2603,6 +2603,95 @@ Table des matières  :
       flex-wrap: wrap;
 }
 
+/* Account
+--------------------------------------------- */
+.account {
+  margin-top: 3.125rem;
+}
+
+.account h2 {
+  position: relative;
+  margin-bottom: 3.125rem;
+}
+
+.account h2:after {
+  background-color: #212121;
+  bottom: -0.9375rem;
+  content: '';
+  display: block;
+  height: 1px;
+  position: absolute;
+  width: 60px;
+}
+
+.account > .row {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.account .col-2, .account .col-3, .account .col-md-3, .account .col-6, .account .col-md-8 {
+  padding-left: 0;
+}
+
+.account .account__defi {
+  background-color: #F2F2F2;
+  border-radius: 0.3125rem;
+}
+
+.account .account__defi-content {
+  padding: 0.125rem 0.625rem;
+}
+
+.account .account__defi-content p {
+  text-align: center;
+}
+
+.account .account__defi img {
+  border-top: 6px solid #559bd9;
+  display: block;
+}
+
+.account .account__training {
+  margin-top: 1.25rem;
+}
+
+.account .account__training .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #559bd9;
+  border-radius: 0.3125rem;
+  padding: 0.625rem;
+}
+
+.account .account__training-icon {
+  padding-right: 0;
+}
+
+.account .account__stats {
+  margin-left: 1.25rem;
+}
+
+.account .account__stats-date {
+  color: #559bd9;
+}
+
+.account .account__stats-item {
+  border-bottom: 1px solid #559bd9;
+  padding-bottom: 0.3125rem;
+  margin-right: 1.875rem;
+}
+
+.account .account__stats-item .name {
+  font-weight: bold;
+}
+
+.account .account__stats-item .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 /* Slider
 --------------------------------------------- */
 #slider {
@@ -2661,7 +2750,6 @@ Table des matières  :
 #slides .slide {
   width: 25%;
   float: left;
-  display: block;
   height: 100%;
   color: #fff;
 }
@@ -2680,13 +2768,8 @@ Table des matières  :
 .slide-content {
   padding: 10px;
   display: block;
-}
-
-@media screen and (min-width: 640px) {
-  .slide-content {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-  }
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 #controls {

@@ -49,7 +49,6 @@
 #slides .slide {
     width: 25%;
     float: left;
-    display: block;
     height: 100%;
     color: #fff;
 }
@@ -64,10 +63,8 @@
 .slide-content {
     padding: 10px;
     display: block;
+    transform: translateY(-100%);
 
-    @include medium-up {
-        transform: translateY(100%);
-    }
 }
 
 #controls {

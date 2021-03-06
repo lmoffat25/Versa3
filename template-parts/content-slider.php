@@ -24,7 +24,7 @@
       $slide_title = get_the_title();
       $slide_content = get_the_content();
       $slide_image = get_the_post_thumbnail_url();?>
-          <div class="slide slide_1" style="background-image : url('<?php echo $slide_image ?>');">
+          <div class="slide slide_<?php echo $z ?>" style="background-image : url('<?php echo $slide_image ?>');">
             <div class="slide-content col-10 centerHz">
               <h2><?php echo $slide_title ?></h2>
               <p><?php echo $slide_content ?></p>
