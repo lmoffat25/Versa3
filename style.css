@@ -115,6 +115,7 @@ body {
    */
 main {
   display: block;
+  overflow: hidden;
 }
 
 /**
@@ -2003,6 +2004,12 @@ Table des matières  :
 
 /* Customisation module
 --------------------------------------------- */
+@media screen and (max-width: 640px) {
+  .customisation {
+    display: none;
+  }
+}
+
 .customisation .watch {
   height: 50vh;
   position: relative;
@@ -2146,6 +2153,46 @@ Table des matières  :
   border-bottom-color: #35436A;
   border-right-color: #35436A;
   z-index: -1;
+}
+
+.customisation-mobile {
+  position: relative;
+}
+
+@media screen and (min-width: 640px) {
+  .customisation-mobile {
+    display: none;
+  }
+}
+
+.customisation-mobile__carousel {
+  position: relative;
+}
+
+.customisation-mobile__cell {
+  width: 100%;
+}
+
+.customisation-mobile__strap {
+  width: 100%;
+}
+
+.customisation-mobile__dial {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  display: none;
+}
+
+.customisation-mobile__dial.-onScreen {
+  display: block;
+}
+
+.flickity-page-dots {
+  display: none;
 }
 
 /* Contenus Flexibles

@@ -14,11 +14,9 @@ filterItems.forEach(function(item){
         this.classList.add("-active");
         console.log(attribute)
         if(attribute === "couleur-du-bracelet"){
-            console.log('strap');
             changeImage(value, ".watch__strap");
         } 
         if(attribute === "couleur-du-cadran"){
-            console.log(attribute);
             changeImage(value, ".watch__dial");
         }
 

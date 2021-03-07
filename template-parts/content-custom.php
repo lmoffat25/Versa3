@@ -15,6 +15,8 @@
     $dial_sizes            = $attributes[$attribute_dial_size]["options"];
     $strap_colors          = $attributes[$attribute_strap_color]["options"];
     $dial_colors           = $attributes[$attribute_dial_color]["options"]; ?>
+
+
 <section class="customisation">
         <form class="bg-triangle">
         <div class="col-12 col-md-6 col-md-push-3">
@@ -69,3 +71,46 @@
             <span id="add-product-to-cart" class="button -alt -big">Ajouter au panier</span>
         </form>
 </section>
+
+<!-- MOBILE #################################################################################################################################################### -->
+<section class="customisation-mobile">
+        <form class="customisation-mobile__form">
+
+            
+            <!-- Carousel -->
+            <div class="customisation-mobile__carousel main-carousel">
+
+                <?php foreach($strap_colors as $strap_color) : ?>
+                    <?php
+                        $isActive = ($default_attributes[$attribute_strap_color] == $strap_color) ? "-active" : "";
+                        $classname = strtolower($strap_color) 
+                    ?>
+                    <div class="customisation-mobile__cell carousel-cell">
+                        <img class="customisation-mobile__strap watch__dial" data-value="<?php echo $strap_color; ?>" data-attribute="<?php echo $attribute_strap_color; ?>" data-source="<?php echo $upload_dir ?>bracelet-{color}.png" src="<?php echo $upload_dir ?>bracelet-<?php echo $strap_color;?>.png" alt="Noir">
+                    </div>
+                <?php endforeach; ?>
+
+            </div>
+            <div class="customisation-mobile__dials">
+                <img class="customisation-mobile__dial watch__dial -cadran-noir -onScreen" data-source="cadran-noir.png" src="<?php echo $upload_dir ?>cadran-noir.png" alt="">
+                <img class="customisation-mobile__dial watch__dial -cadran-rose" data-source="cadran-or.png" src="<?php echo $upload_dir ?>cadran-or.png" alt="">
+            </div> 
+
+            <!-- Buttons-->
+            <div class="customisation-mobile__buttons">
+                <span class="customosation-mobile__button button -alt">44mm</span>
+                <span class="customosation-mobile__button button -alt">55mm</span>
+            </div>
+        </form>
+    </section>
+
+<?php
+    /*
+    <?php foreach($dial_colors as $dial_color) : ?>
+                    <?php
+                        $isActive = ($default_attributes[$attribute_dial_color] == $dial_color) ? "-active" : "";
+                        $classname = strtolower($dial_color)
+                    ?>
+                    <img data-attribute="<?php echo $attribute_dial_color; ?>" data-source="<?php echo $upload_dir ?>cadran-{color}.png" data-value="<?php echo $dial_color; ?>" class="c-colorDots__item filterItem customisation__btn -body customisation-mobile__dial watch__dial -<?php echo $classname; ?> <?php echo $isActive; ?>" src="<?php echo $upload_dir ?>cadran-<?php echo $default_attributes[$attribute_dial_color]?>.png" alt="">
+                <?php endforeach; ?>
+    */

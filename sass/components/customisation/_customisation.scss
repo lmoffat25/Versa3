@@ -1,5 +1,8 @@
 .customisation {
 
+    @include medium-down {
+        display : none;
+    }
     .watch {
         height: 50vh;
         position: relative;
