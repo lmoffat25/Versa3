@@ -2240,7 +2240,7 @@ Table des matières  :
 /* Contenus Flexibles
 --------------------------------------------- */
 .desc-img {
-  margin: 20px auto !important;
+  margin: 4rem auto;
 }
 
 .desc-img__container {
@@ -2552,6 +2552,7 @@ Table des matières  :
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 4rem 0;
 }
 
 .avantages__content #txt3, .avantages__content #txt2 {
@@ -2890,6 +2891,10 @@ Table des matières  :
   display: block;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
+}
+
+.slide-content h2, .slide-content p {
+  color: #F2F2F2;
 }
 
 #controls {

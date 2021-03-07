@@ -18,6 +18,7 @@
 
 
 <section class="customisation">
+        <h2 class="col-lg-3 centerHz">Personnalisez votre montre</h2>
         <form class="bg-triangle">
         <div class="col-12 col-md-6 col-md-push-3">
             <div class="watch">
@@ -74,9 +75,9 @@
 
 <!-- MOBILE #################################################################################################################################################### -->
 <section class="customisation-mobile">
+
         <form class="customisation-mobile__form">
 
-            
             <!-- Carousel -->
             <div class="customisation-mobile__carousel main-carousel">
 

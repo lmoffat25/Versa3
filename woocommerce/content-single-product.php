@@ -9,16 +9,16 @@
     $args['row'] = 0;
     get_template_part('template-parts/content', 'text-image', $args); 
 
-    get_template_part('template-parts/content', 'slider');
+    get_template_part('template-parts/content', 'scroll');
 
-    get_template_part('template-parts/content', 'scroll'); 
+    get_template_part('template-parts/content', 'slider');
 
     get_template_part('template-parts/content', 'custom'); 
 
     $args['row'] = 1;
     get_template_part('template-parts/content', 'text-image', $args); ?>
 
-    <section>
+    <section class="watch-iframes">
         <iframe class="watch-iframe rose_noir" id="59b1aa14-56d4-422d-ac6e-20dffeb60146" src="https://www.vectary.com/viewer/v1/?model=59b1aa14-56d4-422d-ac6e-20dffeb60146&env=studio3" frameborder="0" width="100%" height="480"></iframe>
         <iframe class="watch-iframe bleu_noir" id="c4f83163-9343-4324-841f-6aae28f5bada" src="https://www.vectary.com/viewer/v1/?model=c4f83163-9343-4324-841f-6aae28f5bada&env=studio3" frameborder="0" width="100%" height="480"></iframe>
         <iframe class="watch-iframe noir_noir" id=“44176ab0-c5cd-44d4-9825-6dfe511be53a” src="https://www.vectary.com/viewer/v1/?model=44176ab0-c5cd-44d4-9825-6dfe511be53a&env=studio3" frameborder="0" width="100%" height="480"></iframe>
