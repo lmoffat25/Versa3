@@ -149,3 +149,11 @@
         z-index: -1;
     }
 }
+
+.watch-iframe {
+    display: none;
+
+    &.-visible {
+        display: block;
+    }
+}

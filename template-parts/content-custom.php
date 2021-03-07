@@ -85,21 +85,25 @@
                         $isActive = ($default_attributes[$attribute_strap_color] == $strap_color) ? "-active" : "";
                         $classname = strtolower($strap_color) 
                     ?>
-                    <div class="customisation-mobile__cell carousel-cell">
+                    <div data-strap="<?php echo $strap_color; ?>" class="customisation-mobile__cell carousel-cell">
                         <img class="customisation-mobile__strap watch__dial" data-value="<?php echo $strap_color; ?>" data-attribute="<?php echo $attribute_strap_color; ?>" data-source="<?php echo $upload_dir ?>bracelet-{color}.png" src="<?php echo $upload_dir ?>bracelet-<?php echo $strap_color;?>.png" alt="Noir">
                     </div>
                 <?php endforeach; ?>
 
             </div>
             <div class="customisation-mobile__dials">
-                <img class="customisation-mobile__dial watch__dial -cadran-noir -onScreen" data-source="cadran-noir.png" src="<?php echo $upload_dir ?>cadran-noir.png" alt="">
-                <img class="customisation-mobile__dial watch__dial -cadran-rose" data-source="cadran-or.png" src="<?php echo $upload_dir ?>cadran-or.png" alt="">
+                <img data-dial="noir" class="customisation-mobile__dial watch__dial -cadran-noir -onScreen" data-source="cadran-noir.png" src="<?php echo $upload_dir ?>cadran-noir.png" alt="">
+                <img data-dial="or" class="customisation-mobile__dial watch__dial -cadran-or" data-source="cadran-or.png" src="<?php echo $upload_dir ?>cadran-or.png" alt="">
             </div> 
 
             <!-- Buttons-->
-            <div class="customisation-mobile__buttons">
-                <span class="customosation-mobile__button button -alt">44mm</span>
-                <span class="customosation-mobile__button button -alt">55mm</span>
+            <div class="customisation-mobile__buttons centerHz">
+                <?php foreach($dial_sizes as $dial_size) : ?>
+                    <?php
+                        $isActive = ($default_attributes[$attribute_dial_size] == $dial_size) ? "-active" : "";
+                    ?>
+                    <span data-attribute="<?php echo $attribute_dial_size; ?>" data-value="<?php echo $dial_size; ?>" class="c-dots__item filterItem customosation-mobile__button button -alt -size <?php echo $isActive; ?>"> <?php echo $dial_size ?> mm</span>
+                <?php endforeach; ?>
             </div>
         </form>
     </section>

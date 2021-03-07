@@ -1,18 +1,43 @@
 .customisation-mobile {
-    position : relative;
+    position: relative;
+    margin-top: 16rem;
+    min-height: 80vh;
+    background: #35436A;
+    padding: 3rem 0;
 
     @include medium-up {
         display : none;
     }
+    &__form {
+       // position: relative;
+
+        &:focus {
+            outline: none;
+        }
+    }
 
     &__carousel {
         position : relative;
+        &:focus {
+            outline: none;
+        }
     }
     &__cell {
         width: 100%;
     }
     &__strap {
        width: 100%;
+    }
+
+    &__buttons {
+        width: fit-content;
+
+        .customosation-mobile__button {
+            &.-active {
+                background-color : $white;
+                color : #35436A;
+            }
+        }
     }
 
     &__dial {
@@ -23,6 +48,7 @@
         left : 0;
         pointer-events: none;
         display: none;
+        padding: 3rem 0;
 
         &.-onScreen {
             display: block;

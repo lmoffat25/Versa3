@@ -759,6 +759,10 @@ Table des matières  :
   color: #559bd9;
 }
 
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
 /* -----------------------------------------------------
     #2 Switch 
 ----------------------------------------------------------*/
@@ -2155,8 +2159,20 @@ Table des matières  :
   z-index: -1;
 }
 
+.watch-iframe {
+  display: none;
+}
+
+.watch-iframe.-visible {
+  display: block;
+}
+
 .customisation-mobile {
   position: relative;
+  margin-top: 16rem;
+  min-height: 80vh;
+  background: #35436A;
+  padding: 3rem 0;
 }
 
 @media screen and (min-width: 640px) {
@@ -2165,8 +2181,16 @@ Table des matières  :
   }
 }
 
+.customisation-mobile__form:focus {
+  outline: none;
+}
+
 .customisation-mobile__carousel {
   position: relative;
+}
+
+.customisation-mobile__carousel:focus {
+  outline: none;
 }
 
 .customisation-mobile__cell {
@@ -2177,6 +2201,17 @@ Table des matières  :
   width: 100%;
 }
 
+.customisation-mobile__buttons {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.customisation-mobile__buttons .customosation-mobile__button.-active {
+  background-color: #F2F2F2;
+  color: #35436A;
+}
+
 .customisation-mobile__dial {
   position: absolute;
   width: 100%;
@@ -2185,6 +2220,7 @@ Table des matières  :
   left: 0;
   pointer-events: none;
   display: none;
+  padding: 3rem 0;
 }
 
 .customisation-mobile__dial.-onScreen {
