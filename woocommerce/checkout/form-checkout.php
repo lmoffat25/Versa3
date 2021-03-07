@@ -29,7 +29,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 <div class="container">
 	<div class="checkout">
 		<div class="checkout__header">
-			<h1 class="checkout__title" id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h1>
+			<h2 class="checkout__title" id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h2>
 		</div>
 		<form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 			<div class="row gutter-2">

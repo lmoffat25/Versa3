@@ -14,13 +14,19 @@
  * @package     WooCommerce\Templates
  * @version     2.4.0
  */
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+if (!defined('ABSPATH')) {
+    exit;
 }
 ?>
 
 
-<?php foreach ( $item_data as $data ) : ?>
-    <p class="cartProduct__info <?php echo sanitize_html_class( 'variation-' . $data['key'] ); ?>"><?php echo wp_kses_post( $data['key'] ); ?> : <?php echo wp_kses_post(  $data['display'] ); ?></p>
+<?php foreach ($item_data as $data) : ?>
+    <p class="cartProduct__info <?php echo sanitize_html_class('variation-' . $data['key']); ?>"><?php
+        if (wp_kses_post($data['key']) == 'couleur-du-bracelet') {
+            echo 'Couleur du bracelet';
+        } elseif (wp_kses_post($data['key']) == 'couleur-du-cadran') {
+            echo 'Couleur du cadran';
+        } elseif (wp_kses_post($data['key']) == 'taille-du-cadran') {
+            echo 'Taille du cadran';} ?> : <?php echo wp_kses_post($data['display']); ?></p>
 <?php endforeach; ?>
 

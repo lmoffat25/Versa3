@@ -6,15 +6,15 @@ $cart-space-between: 16px;
 $cart-text-color : #333;
 $cart-text-font-family : "Roboto", Arial, no-serif;
 
-$cart-input-background-color: #333;
-$cart-input-text-color:white;
+$cart-input-background-color: white;
+$cart-input-text-color: $black;
 $cart-input-border: none;
 $cart-input-border-radius: 5px;
 $cart-input-padding: 10px;
 $cart-input-font-size : 14px;
 $cart-label-text-color: #333;
 
-$cart-button-background-color: #851262;
+$cart-button-background-color: $primary-color;
 $cart-button-background-color-hover: #fafafa;
 $cart-button-text-color: #fff;
 
@@ -23,8 +23,8 @@ $cart-delete-button-padding: 6px 8px;
 $cart-delete-button-background-color: #fafafa;
 $cart-delete-button-fill: #000;
 
-$cart-product-background-color:#333;
-$cart-product-text-color: #fff;
+$cart-product-background-color: $white;
+$cart-product-text-color: $black;
 $cart-product-border-radius: 0;
 $cart-product-padding: 50px;
 $cart-product-border: none;
@@ -42,10 +42,10 @@ $cart-summary-border-radius: 5px;
 $cart-summary-border: none;
 $cart-summary-table-space: 16px;
 $cart-summary-padding: 20px;
-$cart-summary-separator:rgba(white, .1);
+$cart-summary-separator:rgba(black, .1);
 
 $cart-billing-padding :16px;
-$cart-billing-background-color : #ddd;
+$cart-billing-background-color : $white;
 $cart-billing-border-radius: 5px;
 
 $cart-product-cross-size: 20px;
@@ -533,4 +533,18 @@ $checkout-space-between: 16px;
     font-weight: normal;
     text-transform: uppercase;
   }
+}
+
+.woocommerce-info {
+  background-color: transparent !important;
+}
+.woocommerce-message {
+  background-color: transparent !important;
+  border: 1px solid $green;
+  padding: rem(5);
+}
+.woocommerce-error {
+  background-color: transparent !important;
+  border: 1px solid $red;
+  padding: rem(5);
 }

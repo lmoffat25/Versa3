@@ -14,11 +14,14 @@ Table des matières  :
 ----------------------------------------------------------*/
 $states : ("incorrect", $red), ("correct", $green), ("filled", $primary-color);
 
-.input {
+.input,
+#customer_details .input-text {
     border : none;
     border-bottom : rem(1) solid #C9C8CD;
+    border-radius: 0;
     padding-bottom : rem(10);
     max-width: 100%;
+    margin-top: 5px;
     &:focus {
         outline : none;
     }
