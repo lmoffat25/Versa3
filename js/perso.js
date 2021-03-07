@@ -1,7 +1,12 @@
-let filterItemsSelector = ".filterItem";
+/*let filterItemsSelector = ".filterItem";
 let filterItems = document.querySelectorAll(filterItemsSelector);
 
 filterItems.forEach(function(item){
+    getAttr(item);
+
+})
+
+function getAttr(item) {
     item.addEventListener("click", function(e){
 
         let attribute = this.dataset.attribute;
@@ -25,7 +30,7 @@ filterItems.forEach(function(item){
 
         jQuery(select).trigger("change.wc-variation-form");
     })
-})
+}
 
 
 let changeImage = function(color, selector){

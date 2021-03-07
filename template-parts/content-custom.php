@@ -86,14 +86,14 @@
                         $classname = strtolower($strap_color) 
                     ?>
                     <div data-strap="<?php echo $strap_color; ?>" class="customisation-mobile__cell carousel-cell">
-                        <img class="customisation-mobile__strap watch__dial" data-value="<?php echo $strap_color; ?>" data-attribute="<?php echo $attribute_strap_color; ?>" data-source="<?php echo $upload_dir ?>bracelet-{color}.png" src="<?php echo $upload_dir ?>bracelet-<?php echo $strap_color;?>.png" alt="Noir">
+                        <img class="customisation-mobile__strap watch__dial filterItem  <?php echo $isActive; ?>" data-value="<?php echo $strap_color; ?>" data-attribute="<?php echo $attribute_strap_color; ?>" data-source="<?php echo $upload_dir ?>bracelet-{color}.png" src="<?php echo $upload_dir ?>bracelet-<?php echo $strap_color;?>.png" alt="">
                     </div>
                 <?php endforeach; ?>
 
             </div>
             <div class="customisation-mobile__dials">
-                <img data-dial="noir" class="customisation-mobile__dial watch__dial -cadran-noir -onScreen" data-source="cadran-noir.png" src="<?php echo $upload_dir ?>cadran-noir.png" alt="">
-                <img data-dial="or" class="customisation-mobile__dial watch__dial -cadran-or" data-source="cadran-or.png" src="<?php echo $upload_dir ?>cadran-or.png" alt="">
+                <img data-dial="noir" class="customisation-mobile__dial watch__dial filterItem -cadran-noir -onScreen" data-source="cadran-noir.png" src="<?php echo $upload_dir ?>cadran-noir.png" alt="">
+                <img data-dial="or" class="customisation-mobile__dial watch__dial filterItem -cadran-or" data-source="cadran-or.png" src="<?php echo $upload_dir ?>cadran-or.png" alt="">
             </div> 
 
             <!-- Buttons-->

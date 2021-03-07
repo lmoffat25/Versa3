@@ -155,5 +155,9 @@
 
     &.-visible {
         display: block;
+
+        @include medium-up {
+            display : none;
+        }
     }
 }

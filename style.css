@@ -2167,6 +2167,12 @@ Table des matières  :
   display: block;
 }
 
+@media screen and (min-width: 640px) {
+  .watch-iframe.-visible {
+    display: none;
+  }
+}
+
 .customisation-mobile {
   position: relative;
   margin-top: 16rem;
@@ -2590,6 +2596,7 @@ Table des matières  :
   .avantages__image {
     position: absolute;
     right: -40%;
+    top: 25px;
   }
 }
 
