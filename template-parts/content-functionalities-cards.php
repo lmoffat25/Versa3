@@ -14,7 +14,7 @@
 ?>
 <!-- Fonctionnalités -->
 
-<section class="fonctionnalites col-12 col-lg-10 col-xl-9">
+<section class="fonctionnalites col-12 col-lg-10">
 <?php if($section_title != null) : ?>
     <h2><?php echo $section_title; ?></h2>
 <?php endif; ?>

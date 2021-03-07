@@ -714,7 +714,7 @@ Table des matières  :
     #1 Forms
     #2 Switch
     #3 Checkbox
-    #34Dropdown Menu
+    #4 Dropdown Menu
 
 #########################################################*/
 /* -----------------------------------------------------
@@ -887,14 +887,10 @@ Table des matières  :
   background-color: #E4E4E4;
   border-radius: 0.3125rem;
   cursor: pointer;
-  margin: 0.9375rem 0;
-  width: 19.375rem;
-}
-
-@media screen and (max-width: 640px) {
-  .dropdownCustom {
-    width: 100%;
-  }
+  margin: 0.9375rem 1rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .dropdownCustom .fa:before {
@@ -917,7 +913,6 @@ Table des matières  :
 
 .dropdownCustom .dropdownCustom__title h2, .dropdownCustom .dropdownCustom__title h3 {
   font-weight: 600;
-  margin: 1.25rem 0;
 }
 
 .dropdownCustom .dropdownCustom__content {
@@ -2403,6 +2398,22 @@ Table des matières  :
   margin: 0.5rem 0;
 }
 
+/* Cards
+--------------------------------------------- */
+.functionalities-menu__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 640px) {
+  .functionalities-menu__container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 /* Comments
 --------------------------------------------- */
 .comment-content a {
@@ -2465,12 +2476,17 @@ Table des matières  :
 .avantages__content-left > *, .avantages__content-right > * {
   position: absolute;
   top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   opacity: 0;
   -webkit-transition: opacity .5s ease-in-out;
   transition: opacity .5s ease-in-out;
+}
+
+@media screen and (max-width: 640px) {
+  .avantages__content-left > *, .avantages__content-right > * {
+    -webkit-transform: translateY(75%);
+            transform: translateY(75%);
+    min-width: 50vw;
+  }
 }
 
 .avantages__content-left > *.-active, .avantages__content-right > *.-active {
@@ -2485,6 +2501,18 @@ Table des matières  :
 .avantages__content-right > div {
   border-left: 2px solid #559bd9;
   padding-left: 2rem;
+}
+
+@media screen and (max-width: 640px) {
+  .avantages__image {
+    position: absolute;
+    right: -40%;
+  }
+}
+
+.avantages__image img {
+  margin: 0 auto;
+  display: block;
 }
 
 /* Widgets
@@ -2560,6 +2588,8 @@ Table des matières  :
 
 .product-header {
   background-image: url("images/product_page.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .product-header__title {

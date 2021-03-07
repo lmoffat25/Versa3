@@ -39,6 +39,8 @@
 
 .product-header {
     background-image : url("images/product_page.png");
+    background-size: cover;
+    background-position: center;
     &__title {
         font-size : rem(90);
         color : $white;

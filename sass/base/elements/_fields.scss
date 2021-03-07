@@ -5,7 +5,7 @@ Table des matières  :
     #1 Forms
     #2 Switch
     #3 Checkbox
-    #34Dropdown Menu
+    #4 Dropdown Menu
 
 #########################################################*/
 
@@ -170,11 +170,10 @@ $states : ("incorrect", $red), ("correct", $green), ("filled", $primary-color);
     background-color : $secondary-color-lighter;
     border-radius : rem(5);
     cursor: pointer;
-    margin: rem(15) 0;
-    width : rem(310);
-    @media screen and (max-width: 640px) {
-        width: 100%;
-    }
+    margin: rem(15) rem(16);
+    //width : rem(310);
+    height: fit-content;
+
     .fa {
         &:before {
             color : $primary-color;
@@ -188,7 +187,7 @@ $states : ("incorrect", $red), ("correct", $green), ("filled", $primary-color);
         padding : 0 rem(20);
         h2, h3 {
             font-weight : 600;
-            margin: rem(20) 0;
+            //margin: rem(20) 0;
         }
     }
     .dropdownCustom__content {

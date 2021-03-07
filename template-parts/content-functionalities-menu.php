@@ -11,12 +11,13 @@
     );
     $section_title = get_field( "functionalites_menu-title" );
 ?>
-<section class="fucntionalities-menu">
+<section class="functionalities-menu col-12 col-md-10 centerHz">
 <?php
     if($section_title != null) : ?>
     <h2><?php echo $section_title; ?></h2>
-<?php endif;
-    $funcs = new WP_Query( $args ); 
+<?php endif; ?>
+<div class="functionalities-menu__container">
+<?php    $funcs = new WP_Query( $args ); 
     while ( $funcs->have_posts() ) : $funcs->the_post(); 
         $tags = get_the_terms( get_the_id(), "functionalities_type" );
         $is_menu = $tags[0]->slug;
@@ -42,5 +43,7 @@
         endif;
     endwhile;
 ?>
+</div><!-- Container -->
+
 </section>
 <?php wp_reset_postdata();

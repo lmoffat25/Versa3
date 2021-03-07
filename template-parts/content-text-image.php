@@ -1,4 +1,4 @@
-<section class="desc-img col-12 col-lg-10 col-xl-9 centerHz">
+<section class="desc-img col-12 col-lg-10  centerHz">
         <?php if ( have_rows('flexible_sections') ) :
                 if ( !empty($args) ) :
                     $row = get_field('flexible_sections')[$args['row']];
@@ -22,6 +22,6 @@
                     <div class="desc-img__image  col-md-7"><img src="<?php echo $section_image; ?>"></div>
                 </div>
                 <?php else : ?>
-                    <h2>Ne marche pas</h2>
+                    <h2>Section texte image n'apparait pas</h2>
        <?php endif; ?>
 </section>
