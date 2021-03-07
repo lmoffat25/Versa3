@@ -132,7 +132,7 @@ function fitbit_widgets_init() {
 //add_action( 'widgets_init', 'fitbit_widgets_init' );
 
 /**
- * Enqueue scripts and styles.
+ * Enqueue scripts and styles. 
  */
 function fitbit_scripts() {
 	wp_enqueue_style( 'fitbit-style', get_stylesheet_uri(), array(), _S_VERSION );
