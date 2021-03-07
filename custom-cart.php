@@ -5,14 +5,13 @@ wp_head();
 get_header();
 ?>
     <main class="cart-page">
+        <div class="col-12 col-lg-10 col-xl-9 centerHz">
 
-        <h2 class="cart-page__title"><?php echo get_the_title() ?></h2>
-
-        <?php get_template_part( 'woocommerce/cart/cart' ); ?>
-
+            <?php get_template_part( 'woocommerce/cart/cart' ); ?>
+        </div>
     </main>
 
 
 <?php
-wp_footer()
+get_footer();
 ?>

@@ -15,7 +15,7 @@ $gutter-base : 0.5rem;
 
 .row{
     display : flex;
-    flex-wrap: wrap;   
+    flex-wrap: wrap;
     margin : 0 calc(var(--custom-gutter) /2 );
     &.-vcenter{
         align-items: center;

@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit; ?>
         <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
             <?php do_action( 'woocommerce_before_cart_table' ); ?>
             <div class="cart__header">
-                <h1 class="cart__title">Mon panier</h1>
+                <h2 class="cart__title">Mon panier</h2>
             </div>
             
             <div class="row cart__row gutter-2">
@@ -145,7 +145,7 @@ defined( 'ABSPATH' ) || exit; ?>
                             <?php endforeach; ?>
                             <?php do_action( 'woocommerce_cart_contents' ); ?>
                     </ul>
-                    <button type="submit" class="button button__update__cart" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+<!--                    <button type="submit" class="button button__update__cart" name="update_cart" value="--><?php //esc_attr_e( 'Update cart', 'woocommerce' ); ?><!--">--><?php //esc_html_e( 'Update cart', 'woocommerce' ); ?><!--</button>-->
            
                 </div>
                 <div class="col-12 col-md-12 col-l-4 col-xl-5">
