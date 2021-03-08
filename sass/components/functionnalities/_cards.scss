@@ -8,7 +8,7 @@
 	@include medium-down {
 		transform: translateY(-12%);
 		padding : 0;
-		box-shadow : 0px 1px 40px rgba(33,33,33,0.25);
+		box-shadow : 1px 1px 40px -15px rgba(33,33,33,0.25);
 	}
 
 	
@@ -40,6 +40,10 @@
 			&::nth-of-type(1) {
 				margin-bottom : rem(8);
 			}
+
+			@include medium-down {
+				margin: 0 auto;
+			}
 		}
 	}
 
@@ -57,7 +61,10 @@
 
 /* Ronds */
 .fonctionnalites {
-	margin: rem(64) auto;
+
+	@include medium-up {
+		margin: rem(64) auto;
+	}
 	h2 {
 		font-weight: 600;
 		text-align: center;

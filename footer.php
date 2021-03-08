@@ -10,7 +10,7 @@
  */
 ?>
 
-<footer class="footer col-10 centerHz">
+<footer class="footer col-12 col-md-10 centerHz">
     <p class="footer__copyright">Copyright © 2020 Fitbit Inc. All rights reserved.</p>
     <?php
         if ( has_nav_menu( 'footer-menu' ) ) :

@@ -1,5 +1,9 @@
 .desc-img {
-    margin: rem(64) auto;
+    margin: rem(32) auto;
+
+    @include medium-up {
+        margin: rem(64) auto;
+    }
 
     &__container {
         display: flex;
@@ -8,6 +12,16 @@
 
     @include medium-up() {
         display : flex;
+    }
+
+    &__button {
+        display: block;
+        width: fit-content;
+        color : $white;
+
+        @include medium-down() {
+            margin: rem(22) auto;
+        }
     }
 }
 #primary > section:nth-child(8) {

@@ -106,6 +106,7 @@
                     <span data-attribute="<?php echo $attribute_dial_size; ?>" data-value="<?php echo $dial_size; ?>" class="c-dots__item filterItem customosation-mobile__button button -alt -size <?php echo $isActive; ?>"> <?php echo $dial_size ?> mm</span>
                 <?php endforeach; ?>
             </div>
+            <span id="add-product-to-cart" class="button -big">Ajouter au panier</span>
         </form>
     </section>
 

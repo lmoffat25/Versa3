@@ -35,6 +35,9 @@ button {
     &:focus {
         outline : none;
     }
+    &:visited {
+        color : $white;
+    }
     &:hover {
         background : transparent;
         color : $primary-color;

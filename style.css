@@ -667,6 +667,10 @@ button {
   outline: none;
 }
 
+.button:visited {
+  color: #F2F2F2;
+}
+
 .button:hover {
   background: transparent;
   color: #559bd9;
@@ -2021,7 +2025,7 @@ Table des matières  :
 .customisation .watch {
   height: 50vh;
   position: relative;
-  width: 50vh;
+  width: 45vh;
 }
 
 .customisation .watch__dial {
@@ -2075,6 +2079,14 @@ Table des matières  :
 }
 
 .customisation__size .customisation__btn:not(:last-of-type) {
+  padding-right: 1.25rem;
+}
+
+.customisation__bodies {
+  width: 8.5625rem;
+}
+
+.customisation__bodies .customisation__btn:not(:last-of-type) {
   padding-right: 1.25rem;
 }
 
@@ -2143,7 +2155,6 @@ Table des matières  :
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  height: 600px;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -2179,6 +2190,10 @@ Table des matières  :
   .watch-iframe.-visible {
     display: none;
   }
+}
+
+#add-product-to-cart {
+  margin: 1rem auto;
 }
 
 .customisation-mobile {
@@ -2220,9 +2235,22 @@ Table des matières  :
   width: fit-content;
 }
 
+.customisation-mobile__buttons .customosation-mobile__button {
+  display: inline-block;
+}
+
 .customisation-mobile__buttons .customosation-mobile__button.-active {
   background-color: #F2F2F2;
   color: #35436A;
+}
+
+@media screen and (max-width: 640px) {
+  .customisation-mobile #add-product-to-cart {
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 
 .customisation-mobile__dial {
@@ -2247,7 +2275,13 @@ Table des matières  :
 /* Contenus Flexibles
 --------------------------------------------- */
 .desc-img {
-  margin: 4rem auto;
+  margin: 2rem auto;
+}
+
+@media screen and (min-width: 640px) {
+  .desc-img {
+    margin: 4rem auto;
+  }
 }
 
 .desc-img__container {
@@ -2263,6 +2297,20 @@ Table des matières  :
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+.desc-img__button {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #F2F2F2;
+}
+
+@media screen and (max-width: 640px) {
+  .desc-img__button {
+    margin: 1.375rem auto;
   }
 }
 
@@ -2292,8 +2340,10 @@ Table des matières  :
   text-align: center;
 }
 
-.newsletter__img {
-  margin-bottom: 3.125rem;
+@media screen and (min-width: 640px) {
+  .newsletter__img {
+    margin-bottom: 3.125rem;
+  }
 }
 
 .newsletter__img h2 {
@@ -2411,8 +2461,8 @@ Table des matières  :
     -webkit-transform: translateY(-12%);
             transform: translateY(-12%);
     padding: 0;
-    -webkit-box-shadow: 0px 1px 40px rgba(33, 33, 33, 0.25);
-            box-shadow: 0px 1px 40px rgba(33, 33, 33, 0.25);
+    -webkit-box-shadow: 1px 1px 40px -15px rgba(33, 33, 33, 0.25);
+            box-shadow: 1px 1px 40px -15px rgba(33, 33, 33, 0.25);
   }
 }
 
@@ -2459,6 +2509,12 @@ Table des matières  :
   margin-bottom: 0.5rem;
 }
 
+@media screen and (max-width: 640px) {
+  .reinssurance__buttons a {
+    margin: 0 auto;
+  }
+}
+
 .reinssurance__content {
   padding: 1rem;
 }
@@ -2475,8 +2531,10 @@ Table des matières  :
 }
 
 /* Ronds */
-.fonctionnalites {
-  margin: 4rem auto;
+@media screen and (min-width: 640px) {
+  .fonctionnalites {
+    margin: 4rem auto;
+  }
 }
 
 .fonctionnalites h2 {
