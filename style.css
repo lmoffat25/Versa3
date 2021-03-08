@@ -2178,18 +2178,18 @@ Table des matières  :
   margin: 4rem auto;
 }
 
+@media screen and (min-width: 640px) {
+  .watch-iframes {
+    display: none;
+  }
+}
+
 .watch-iframe {
   display: none;
 }
 
 .watch-iframe.-visible {
   display: block;
-}
-
-@media screen and (min-width: 640px) {
-  .watch-iframe.-visible {
-    display: none;
-  }
 }
 
 #add-product-to-cart {
@@ -2979,6 +2979,8 @@ Table des matières  :
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-shadow: inset 0px -250px 80px rgba(0, 0, 0, 0.44);
+          box-shadow: inset 0px -250px 80px rgba(0, 0, 0, 0.44);
 }
 
 .slide-content {
@@ -2988,7 +2990,14 @@ Table des matières  :
           transform: translateY(-100%);
 }
 
-.slide-content h2, .slide-content p {
+@media screen and (min-width: 640px) {
+  .slide-content {
+    -webkit-transform: translateY(-60%);
+            transform: translateY(-60%);
+  }
+}
+
+.slide-content__title, .slide-content p {
   color: #F2F2F2;
 }
 

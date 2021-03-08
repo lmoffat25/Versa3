@@ -160,6 +160,9 @@
 }
 .watch-iframes {
     margin : rem(64) auto;
+    @include medium-up {
+        display : none;
+    }
 }
 .watch-iframe {
     display: none;
@@ -167,9 +170,6 @@
     &.-visible {
         display: block;
 
-        @include medium-up {
-            display : none;
-        }
     }
 }
 #add-product-to-cart {
