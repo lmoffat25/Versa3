@@ -5,6 +5,9 @@
     object-fit: cover;
     height: 100vh;
     width: 100%;
+    @include medium-down {
+        margin-top: 17rem;
+    }
 }
 
 #slider input[type=radio] {

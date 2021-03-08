@@ -3,7 +3,14 @@
 	display : grid;
 	grid-template-columns : repeat(3, 2fr);
 	grid-auto-rows : minmax(rem(100px), auto);
-	grid-gap : rem(16);
+	grid-gap : rem(32);
+
+	@include medium-down {
+		transform: translateY(-12%);
+		padding : 0;
+		box-shadow : 0px 1px 40px rgba(33,33,33,0.25);
+	}
+
 	
 	&__card {
 		background-color : $white;
@@ -63,6 +70,7 @@
 	}
 
 	&__image {
+		margin : rem(16) auto;
 		img {
 			padding :10px;
 			border : 2px solid #559BD9;

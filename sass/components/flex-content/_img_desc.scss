@@ -10,3 +10,9 @@
         display : flex;
     }
 }
+#primary > section:nth-child(8) {
+    @include medium-down {
+        display: none;
+    }
+}
+

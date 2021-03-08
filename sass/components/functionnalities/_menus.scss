@@ -1,5 +1,6 @@
 .functionalities-menu {
-
+    margin : rem(64) auto;
+    
     &__container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

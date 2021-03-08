@@ -19,6 +19,7 @@
     get_template_part('template-parts/content', 'text-image', $args); ?>
 
     <section class="watch-iframes">
+        <h2 class="col-12 txtalign">Votre fitbit en réalité augmentée</h2>
         <iframe class="watch-iframe rose_noir" id="59b1aa14-56d4-422d-ac6e-20dffeb60146" src="https://www.vectary.com/viewer/v1/?model=59b1aa14-56d4-422d-ac6e-20dffeb60146&env=studio3" frameborder="0" width="100%" height="480"></iframe>
         <iframe class="watch-iframe bleu_noir" id="c4f83163-9343-4324-841f-6aae28f5bada" src="https://www.vectary.com/viewer/v1/?model=c4f83163-9343-4324-841f-6aae28f5bada&env=studio3" frameborder="0" width="100%" height="480"></iframe>
         <iframe class="watch-iframe noir_noir" id=“44176ab0-c5cd-44d4-9825-6dfe511be53a” src="https://www.vectary.com/viewer/v1/?model=44176ab0-c5cd-44d4-9825-6dfe511be53a&env=studio3" frameborder="0" width="100%" height="480"></iframe>
@@ -36,7 +37,7 @@
     get_template_part('template-parts/content', 'app',); ?>
     
 
-<div class="summary entry-summary">
+<div class="summary entry-summary" style="display : none;">
     <?php
     /**
      * Hook: woocommerce_single_product_summary.

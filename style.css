@@ -1576,6 +1576,10 @@ input:focus, textarea:focus, select:focus {
   height: 75vh;
 }
 
+.app__title.centerHz, .app__title {
+  margin-bottom: 1rem;
+}
+
 .app__container {
   width: 100%;
   height: 100%;
@@ -2159,6 +2163,10 @@ Table des matières  :
   z-index: -1;
 }
 
+.watch-iframes {
+  margin: 4rem auto;
+}
+
 .watch-iframe {
   display: none;
 }
@@ -2175,7 +2183,6 @@ Table des matières  :
 
 .customisation-mobile {
   position: relative;
-  margin-top: 16rem;
   min-height: 80vh;
   background: #35436A;
   padding: 3rem 0;
@@ -2259,6 +2266,12 @@ Table des matières  :
   }
 }
 
+@media screen and (max-width: 640px) {
+  #primary > section:nth-child(8) {
+    display: none;
+  }
+}
+
 /* Newsletter
 --------------------------------------------- */
 .newsletter {
@@ -2331,7 +2344,6 @@ Table des matières  :
 .footer {
   border-top: 0.125rem solid #212121;
   padding-top: 1rem;
-  margin-top: 1.25rem !important;
   margin-bottom: 1.25rem !important;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2391,7 +2403,17 @@ Table des matières  :
   -ms-grid-columns: (2fr)[3];
       grid-template-columns: repeat(3, 2fr);
   grid-auto-rows: minmax(6.25pxrem, auto);
-  grid-gap: 1rem;
+  grid-gap: 2rem;
+}
+
+@media screen and (max-width: 640px) {
+  .reinssurance {
+    -webkit-transform: translateY(-12%);
+            transform: translateY(-12%);
+    padding: 0;
+    -webkit-box-shadow: 0px 1px 40px rgba(33, 33, 33, 0.25);
+            box-shadow: 0px 1px 40px rgba(33, 33, 33, 0.25);
+  }
 }
 
 .reinssurance__card {
@@ -2474,6 +2496,10 @@ Table des matières  :
   margin-top: 2.625rem;
 }
 
+.fonctionnalites__image {
+  margin: 1rem auto;
+}
+
 .fonctionnalites__image img {
   padding: 10px;
   border: 2px solid #559BD9;
@@ -2489,6 +2515,10 @@ Table des matières  :
 
 /* Cards
 --------------------------------------------- */
+.functionalities-menu {
+  margin: 4rem auto;
+}
+
 .functionalities-menu__container {
   display: -ms-grid;
   display: grid;
@@ -2517,6 +2547,7 @@ Table des matières  :
 --------------------------------------------- */
 .avantages {
   position: relative;
+  margin: 4rem auto;
 }
 
 .avantages > h2 {
@@ -2825,6 +2856,12 @@ Table des matières  :
   width: 100%;
 }
 
+@media screen and (max-width: 640px) {
+  #slider {
+    margin-top: 17rem;
+  }
+}
+
 #slider input[type=radio] {
   display: none;
 }
@@ -3049,5 +3086,9 @@ Table des matières  :
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em;
+}
+
+.txtalign {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
