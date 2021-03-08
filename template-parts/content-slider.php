@@ -21,14 +21,14 @@
       <div class="inner">
       <?php while ( $slider->have_posts() ) : $slider->the_post(); $z++;
       
-      $slide_title = get_the_title();
-      $slide_content = get_the_content();
-      $slide_image = get_the_post_thumbnail_url();?>
+        $slide_title = get_the_title();
+        $slide_content = get_the_content();
+        $slide_image = get_the_post_thumbnail_url();?>
           <div class="slide slide_<?php echo $z ?>" style="background-image : url('<?php echo $slide_image ?>');">
             <div class="slide-content col-10 centerHz">
-              <h2><?php echo $slide_title ?></h2>
-              <p><?php echo $slide_content ?></p>
-              <button class="button">ACHETER</button>
+              <h3 class="slide-content__title"><?php echo $slide_title ?></h3>
+              <p class="slide-content__content"><?php echo $slide_content; ?></p>
+              <button class="button -alt">ACHETER</button>
             </div>
           </div>
         <?php endwhile; ?>

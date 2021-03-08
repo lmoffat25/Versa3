@@ -5,6 +5,9 @@
     object-fit: cover;
     height: 100vh;
     width: 100%;
+    @include medium-down {
+        margin-top: 17rem;
+    }
 }
 
 #slider input[type=radio] {
@@ -58,6 +61,7 @@
     background-position : center;
     display: flex;
     align-items : flex-end;
+    box-shadow: inset 0px -250px 80px rgba(0, 0, 0, 0.44);
 }
 
 .slide-content {
@@ -65,7 +69,11 @@
     display: block;
     transform: translateY(-100%);
 
-    h2, p {
+    @include medium-up {
+        transform: translateY(-60%);
+    }
+
+    &__title, p {
         color : $white;
     }
 

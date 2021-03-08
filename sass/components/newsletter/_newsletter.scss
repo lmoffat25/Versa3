@@ -9,7 +9,9 @@
     }
 
     &__img {
-        margin-bottom: rem(50);
+        @include medium-up {
+            margin-bottom: rem(50);
+        }
         h2 {
             font-size: rem(50);
             font-weight: bold;

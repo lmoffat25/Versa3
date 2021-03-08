@@ -16,7 +16,7 @@
 
 <section class="fonctionnalites col-12 col-lg-10">
 <?php if($section_title != null) : ?>
-    <h2><?php echo $section_title; ?></h2>
+    <h2 class="col-lg-8 centerHz"><?php echo $section_title; ?></h2>
 <?php endif; ?>
     <div class="fonctionnalites__container centerHz">
     <?php 

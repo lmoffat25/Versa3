@@ -3,7 +3,14 @@
 	display : grid;
 	grid-template-columns : repeat(3, 2fr);
 	grid-auto-rows : minmax(rem(100px), auto);
-	grid-gap : rem(16);
+	grid-gap : rem(32);
+
+	@include medium-down {
+		transform: translateY(-12%);
+		padding : 0;
+		box-shadow : 1px 1px 40px -15px rgba(33,33,33,0.25);
+	}
+
 	
 	&__card {
 		background-color : $white;
@@ -33,6 +40,10 @@
 			&::nth-of-type(1) {
 				margin-bottom : rem(8);
 			}
+
+			@include medium-down {
+				margin: 0 auto;
+			}
 		}
 	}
 
@@ -50,7 +61,10 @@
 
 /* Ronds */
 .fonctionnalites {
-	margin: rem(64) auto;
+
+	@include medium-up {
+		margin: rem(64) auto;
+	}
 	h2 {
 		font-weight: 600;
 		text-align: center;
@@ -63,6 +77,7 @@
 	}
 
 	&__image {
+		margin : rem(16) auto;
 		img {
 			padding :10px;
 			border : 2px solid #559BD9;

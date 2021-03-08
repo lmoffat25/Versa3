@@ -1,6 +1,5 @@
 .customisation-mobile {
     position: relative;
-    margin-top: 16rem;
     min-height: 80vh;
     background: #35436A;
     padding: 3rem 0;
@@ -33,10 +32,17 @@
         width: fit-content;
 
         .customosation-mobile__button {
+            display: inline-block;
             &.-active {
                 background-color : $white;
                 color : #35436A;
             }
+        }
+    }
+    #add-product-to-cart {
+        @include medium-down {
+            display: block;
+            width: fit-content;
         }
     }
 

@@ -6,7 +6,7 @@
     .watch {
         height: 50vh;
         position: relative;
-        width: 50vh;
+        width: 45vh;
         &__dial {
             position: absolute;
         }
@@ -62,6 +62,16 @@
             &:hover, &.-active {
                 text-decoration: underline;
             }
+            &:not(:last-of-type) {
+                
+                padding-right : rem(20);
+            }
+        }
+    }
+
+    &__bodies {
+        width: rem(137);
+        .customisation__btn {
             &:not(:last-of-type) {
                 
                 padding-right : rem(20);
@@ -132,7 +142,6 @@
     align-items: center;
     display: flex;
     flex-flow: column;
-    height: 600px;
     justify-content: space-evenly;
     position: relative;
     
@@ -149,15 +158,21 @@
         z-index: -1;
     }
 }
-
+.watch-iframes {
+    margin : rem(64) auto;
+    @include medium-up {
+        display : none;
+    }
+}
 .watch-iframe {
     display: none;
-
+    
     &.-visible {
         display: block;
 
-        @include medium-up {
-            display : none;
-        }
     }
+}
+#add-product-to-cart {
+    margin: 1rem auto;
+
 }
