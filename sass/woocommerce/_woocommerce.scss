@@ -1,10 +1,9 @@
 // Foundations
 @import "./foundation/mixins";
-@import "./foundation/grid";
 
 $cart-space-between: 16px;
 $cart-text-color : #333;
-$cart-text-font-family : "Roboto", Arial, no-serif;
+$cart-text-font-family : "Open sans", Arial, no-serif;
 
 $cart-input-background-color: white;
 $cart-input-text-color: $black;
@@ -547,4 +546,29 @@ $checkout-space-between: 16px;
   background-color: transparent !important;
   border: 1px solid $red;
   padding: rem(5);
+}
+
+.cart-page {
+  &__container {
+    min-height: 90%;
+    margin-top: rem(80);
+  }
+}
+
+.cart {
+  &__row {
+    @include medium-down {
+      flex-flow: column;
+
+      >div {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  .button__update__cart {
+    @include medium-down {
+      margin: 0 auto;
+      display: block;
+    }
+  }
 }

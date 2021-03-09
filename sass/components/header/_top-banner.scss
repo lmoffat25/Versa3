@@ -32,9 +32,10 @@
             width: max-content;
             left: 50%;
             transform: translate3d(-50%, 0px, 0px);
-            z-index: -2;
+
             @include medium-up() {
                 bottom : 8%;
+                z-index: -2;
             }
         }
     }
@@ -53,6 +54,7 @@
         font-size : rem(90);
         color : $white;
         text-transform : uppercase;
+        margin-bottom : rem(48)
     }
     &__subtitle {
         color : $white;
