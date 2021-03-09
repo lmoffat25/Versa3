@@ -20,11 +20,11 @@ button {
 /* -----------------------------------------------------
     #2 Custom Buttons
 ----------------------------------------------------------*/
-.button {
+.button, .search-submit {
     background : $primary-color;
     border : rem(1) solid $primary-color;
     border-radius : rem(22);
-    color :  $white !important;
+    color :  $white;
     cursor : pointer;
     font-family: $font-title;
     padding : rem(8) rem(40);
@@ -40,7 +40,7 @@ button {
     }
     &:hover {
         background : transparent;
-        color : $primary-color !important;
+        color : $primary-color;
     }
 
     //Modifiers

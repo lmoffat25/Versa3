@@ -8,7 +8,7 @@
     $cards = new WP_Query( $args ); 
 ?>
 
-<section class="reinssurance col-10 col-lg-10 col-xl-9 centerHz">
+<section class="reinssurance col-10 col-lg-10 centerHz">
         <?php while( $cards->have_posts() ) : $cards->the_post(); ?>
             <div class="reinssurance__card">
                 <div class="reinssurance__content">

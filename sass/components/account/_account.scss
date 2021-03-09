@@ -19,9 +19,6 @@
   .col-2, .col-3, .col-md-3, .col-6, .col-md-8 {
     padding-left: 0;
   }
-  .p-0 {
-    padding: 0 !important;
-  }
   .account__defi {
     background-color: $white;
     border-radius : rem(5);
@@ -49,7 +46,7 @@
     }
   }
   .account__stats {
-    margin-left: rem(40);
+    margin-left: rem(20);
     &-date {
       color: $primary-color;
     }

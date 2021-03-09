@@ -78,6 +78,9 @@
 
 	&__image {
 		margin : rem(16) auto;
+		h3 {
+			text-align : center;
+		}
 		img {
 			padding :10px;
 			border : 2px solid #559BD9;

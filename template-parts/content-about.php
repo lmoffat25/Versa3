@@ -1,6 +1,6 @@
 <?php
    $args = array(  
-        'post_type' => 'sections-about',
+        'post_type' => 'about',
         'post_status' => 'publish',
         'posts_per_page' => 4, 
     );
