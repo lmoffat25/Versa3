@@ -1,0 +1,98 @@
+$maxColumns : 12;
+
+$gutter-base : 0.5rem;
+
+:root{
+    --custom-gutter: 0;
+}
+
+
+.container{
+    max-width: 1200px;
+    margin : 0 auto;
+
+}
+
+.row{
+    display : flex;
+    flex-wrap: wrap;
+    margin : 0 calc(var(--custom-gutter) /2 );
+    &.-vcenter{
+        align-items: center;
+    }
+    div[class^="col"]{
+        padding-left :calc(var(--custom-gutter) / 2);
+        padding-right :calc(var(--custom-gutter) /2);
+    }
+    @for $i from 1 through 10 {
+        &.gutter-#{$i}{
+            --custom-gutter: #{$gutter-base * $i};
+        }       
+    }
+
+}
+
+@function calculate-width($number){
+    @return $number/$maxColumns * 100%;
+}
+
+@for $i from 1 through $maxColumns{
+    .col-#{$i}{
+        flex-basis : calculate-width($i);
+        max-width: calculate-width($i);
+    }
+    .col-offset-#{$i}{
+        margin-left : calculate-width($i);
+    }
+    .col-push-#{$i}{
+        position : relative;
+        left : calculate-width($i);
+    }
+    .col-pull-#{$i}{
+        position : relative;
+        right : calculate-width($i);
+    }
+}
+
+@include medium-up(){
+    @for $i from 1 through $maxColumns{
+        .col-md-#{$i}{
+            flex-basis : calculate-width($i);
+            max-width: calculate-width($i);
+        }
+        .col-md-offset-#{$i}{
+            margin-left : calculate-width($i);
+        }
+        .col-md-push-#{$i}{
+            position : relative;
+            left : calculate-width($i);
+        }
+        .col-md-pull-#{$i}{
+            position : relative;
+            right : calculate-width($i);
+        }
+    }
+}
+
+@include large-up(){
+    @for $i from 1 through $maxColumns{
+        .col-l-#{$i}{
+            flex-basis : calculate-width($i);
+            max-width: calculate-width($i);
+        }
+        .col-l-offset-#{$i}{
+            margin-left : calculate-width($i);
+        }
+    }
+}
+@include x-large-up(){
+    @for $i from 1 through $maxColumns{
+        .col-xl-#{$i}{
+            flex-basis : calculate-width($i);
+            max-width: calculate-width($i);
+        }
+    }
+}
+
+
+
